@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: integrations/performance-tab.html 
+keywords: keystone-aiq, digital advisor keystone, performance tab 
+summary: Pour surveiller les performances de vos systèmes, vous pouvez afficher les mesures de performances des volumes ONTAP gérés par vos abonnements Keystone . 
+---
+= Afficher les indicateurs de performance
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pour surveiller les performances de vos systèmes, vous pouvez afficher les mesures de performances des volumes ONTAP gérés par vos abonnements Keystone .
+
+
+TIP: Cet onglet est disponible en option dans Digital Advisor.  Contactez le support pour visualiser cet onglet.  Il n'est pas disponible dans BlueXP.
+
+Pour afficher cet onglet dans Digital Advisor, suivez ces étapes :
+
+.Étapes
+. Cliquez sur *Général > Abonnements Keystone > Performances*.
+. Sélectionnez le numéro d'abonnement.  Par défaut, le premier numéro d'abonnement est sélectionné.
+. Sélectionnez le nom du volume requis dans la liste.
++
+Alternativement, vous pouvez cliquer sur le boutonimage:aiq-ks-time-icon.png["icône graphique"] icône par rapport à un volume ONTAP dans l'onglet *Volumes* pour accéder à cet onglet.
+
+. Sélectionnez la plage de dates pour la requête.  La plage de dates peut être le début du mois ou la date de début de l'abonnement jusqu'à la date actuelle ou la date de fin de l'abonnement.  Vous ne pouvez pas sélectionner une date future.
+
+
+Les détails récupérés sont basés sur l’objectif de niveau de service de performance pour chaque niveau de service de performance.  Par exemple, les IOPS de pointe, le débit maximal, la latence cible et d’autres mesures sont déterminés par les paramètres individuels du niveau de service de performances.  Pour plus d'informations sur les paramètres, voirlink:../concepts/service-levels.html["Niveaux de service de performance dans Keystone"] .
+
+
+NOTE: Si vous sélectionnez la case à cocher *Ligne de référence SLO*, les graphiques d'IOPS, de débit et de latence sont rendus en fonction de l'objectif de niveau de service de performances pour le niveau de service de performances.  Sinon, ils sont affichés en chiffres réels.
+
+Les données de performance affichées sur le graphique horizontal sont une moyenne à chaque intervalle de cinq minutes et organisées selon la plage de dates de la requête.  Vous pouvez faire défiler les graphiques et passer votre souris sur des points de données spécifiques pour approfondir les données collectées.
+
+Vous pouvez afficher et comparer les mesures de performances dans les sections suivantes en fonction de la combinaison du numéro d'abonnement, du nom du volume et de la plage de dates sélectionnée.  Les détails sont affichés selon le niveau de service de performance attribué au volume.  Vous pouvez voir le nom du cluster et le type de volume, c'est-à-dire les autorisations de lecture et d'écriture attribuées au volume.  Tout message d’avertissement associé au volume est également affiché.
+
+
+
+== Op E/S par sec
+
+Cette section affiche les graphiques d'entrée-sortie pour les charges de travail du volume en fonction de la plage de dates de la requête.  Les IOPS de pointe pour le niveau de service de performance et les IOPS actuels (au cours des cinq dernières minutes, non basés sur la plage de dates de la requête) sont affichés, ainsi que les IOPS minimum, maximum et moyen pour la plage de temps, en IOPS/Tib.
+
+image:perf-iops.png["Section IOPS du graphique"]
+
+
+
+== Débit
+
+Cette section affiche les graphiques de débit des charges de travail du volume en fonction de la plage de dates de la requête.  Le débit maximal pour le niveau de service de performance (SLO Max) et le débit actuel (au cours des cinq dernières minutes, non basé sur la plage de dates de la requête) sont affichés, ainsi que le débit minimum, maximum et moyen pour la plage de temps, en Mbit/s/s.
+
+image:perf-thr.png["Graphiques de débit"]
+
+
+
+== Latence (ms)
+
+Cette section affiche les graphiques de latence des charges de travail du volume en fonction de la plage de dates de la requête.  La latence maximale pour le niveau de service de performance (SLO Target) et la latence actuelle (au cours des cinq dernières minutes, non basée sur la plage de dates de la requête) sont affichées, ainsi que la latence minimale, maximale et moyenne pour la plage de temps, en millisecondes.
+
+Ce graphique a les couleurs suivantes :
+
+* Bleu clair : _Latence_.  Il s’agit de la latence réelle qui inclut toute latence autre que celle de votre service Keystone .  Cela peut inclure une latence supplémentaire, telle que la latence se produisant entre votre réseau et votre client.
+* Bleu foncé : _Latence effective_.  La latence effective est la latence applicable uniquement à votre service Keystone par rapport à votre SLA.
+
+
+image:perf-lat.png["graphiques de performance"]
+
+
+
+== Logique utilisée (Tio)
+
+Cette section affiche les capacités provisionnées et logiquement utilisées du volume.  La capacité logique utilisée actuelle (au cours des cinq dernières minutes, non basée sur la plage de dates de la requête), ainsi que l'utilisation minimale, maximale et moyenne pour la plage de temps sont affichées en Tio.  Sur ce graphique, la zone grise représente la capacité engagée et le graphique jaune indique l'utilisation logique.
+
+image:perf-log-usd.png["graphique de capacité logique utilisée"]
+
+*Informations connexes*
+
+* link:../integrations/dashboard-overview.html["Comprendre le tableau de bord Keystone"]
+* link:../integrations/subscriptions-tab.html["Consultez les détails de votre abonnement"]
+* link:../integrations/current-usage-tab.html["Consultez les détails de votre consommation actuelle"]
+* link:../integrations/consumption-tab.html["Voir les tendances de consommation"]
+* link:../integrations/subscription-timeline.html["Consultez la chronologie de votre abonnement"]
+* link:../integrations/assets-tab.html["Consultez vos actifs d'abonnement Keystone"]
+* link:../integrations/assets.html["Afficher les ressources de vos abonnements Keystone"]
+* link:../integrations/volumes-objects-tab.html["Afficher les détails des volumes et des objets"]
+

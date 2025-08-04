@@ -1,0 +1,162 @@
+---
+sidebar: sidebar 
+permalink: concepts/capacity-requirements.html 
+keywords: storage capacity requirement for service levels, capacity definition per PSL, 
+summary: 'Les exigences de capacité pour les niveaux de service diffèrent selon le fichier, le bloc, l"objet ou le stockage cloud pris en charge par l"abonnement Keystone STaaS.' 
+---
+= Exigences de capacité pour les niveaux de service de performance
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les exigences de capacité pour les niveaux de service de performances Keystone STaaS diffèrent selon les offres de stockage de fichiers, de blocs, d'objets et de cloud prises en charge par l'abonnement Keystone STaaS.
+
+
+
+== Exigences de capacité minimale pour les services de fichiers et de blocs
+
+La capacité minimale et la capacité incrémentielle autorisées par abonnement sont décrites dans le tableau suivant.  La capacité minimale par niveau de service de performance est définie comme étant la même pour tous les mouvements de vente Keystone .  La capacité supérieure à la capacité minimale soit au début de l'abonnement, soit en tant que service complémentaire à l'abonnement, soit après réaffectation pendant l'abonnement est également structurée dans le tableau.
+
+|===
+
+
+| Capacité | Extrême | Prime | Performances | Standard | Valeur 
+
+
+ a| 
+Capacité minimale [en Tio]
+3+| 25 2+| 100 
+
+
+ a| 
+Capacité incrémentielle (et en multiples) autorisée au début de l'abonnement [en Tio]
+3+| 25 2+| 25 
+
+
+ a| 
+Capacité incrémentielle (et en multiples) autorisée en complément lors de l'abonnement [en Tio]
+3+| 25 2+| 25 
+|===
+
+
+== Exigences de capacité minimale pour le stockage d'objets
+
+Vous pouvez voir les exigences de capacité minimale pour le stockage d'objets dans le tableau suivant :
+
+|===
+
+
+| Capacité | hiérarchisation des données | Objet | Cloud Volumes ONTAP | Service de sauvegarde dans le cloud 
+
+
+ a| 
+Capacité minimale [en Tio]
+ a| 
+Non Concerné
+ a| 
+500
+ a| 
+4
+ a| 
+4
+
+
+
+ a| 
+Capacité incrémentielle (et en multiples) autorisée au début de l'abonnement [en Tio]
+ a| 
+Non Concerné
+ a| 
+100
+ a| 
+1
+ a| 
+1
+
+
+
+ a| 
+Capacité incrémentielle (et en multiples) autorisée en complément lors de l'abonnement [en Tio]
+ a| 
+Non Concerné
+ a| 
+100
+ a| 
+1
+ a| 
+1
+
+|===
+
+
+== Ajustements de capacité
+
+En savoir plus sur les ajustements de capacité :
+
+* La capacité peut être ajoutée à tout moment pendant la durée du contrat, à l'exception des 90 derniers jours de la durée du contrat, par incréments par niveau de service de performance comme décrit dans les tableaux de la section précédente.  L'ajout de capacité ou de services est autorisé dans les 90 derniers jours de la durée du contrat à condition qu'il y ait un consentement de renouvellement du service.  Tout ajout de capacité, tout nouveau service sur site ou dans le cloud peut être assorti du terme existant.  La facture qui vous sera envoyée suite à l'activation des nouveaux services reflète la facturation révisée.  La capacité engagée des services cloud ne peut être réduite à aucun moment pendant la durée de l'abonnement.  Parallèlement, la capacité engagée et les dépenses engagées sur les services sur site pendant la durée du contrat peuvent être réduites en fonction de certains critères définis dans la section suivante _Réduction de capacité_.
+* Une capacité de pointe est disponible sur chaque site, sur la base de l'accord Keystone .  En général, elle est supérieure de 20 % à la capacité engagée pour un niveau de service de performance.  Toute utilisation intensive est facturée uniquement pour cette période de facturation.  Si vous avez des besoins supplémentaires en rafale supérieurs à la capacité convenue, contactez le support.
+* La capacité engagée peut être modifiée pendant la durée d'un contrat, uniquement sous certaines conditions, comme décrit dans la section suivante _Réduction de capacité_.
+* L'augmentation de la capacité ou le passage à un niveau de service plus performant au cours d'une période d'abonnement est autorisé.  Toutefois, le passage d’un niveau de service de performance supérieur à un niveau de service de performance inférieur n’est pas autorisé.
+* Toute demande de modification dans les 90 derniers jours de la durée du service nécessite un renouvellement du service pour une durée minimale d'un an.
+
+
+
+
+=== Réduction de capacité
+
+La réduction de capacité (annuelle) s'applique au modèle de paiement _Annuel à l'avance_ et aux déploiements sur site uniquement.  Il n'est pas disponible pour les services cloud ou les services cloud hybrides.  Il prévoit une capacité sur site, qui peut être réduite jusqu'à 25 % par niveau de service et par abonnement.  Cette réduction est autorisée une fois par an et prend effet au début de la période de facturation annuelle suivante.  Les paiements annuels basés sur les services sur site doivent être >= 200 000 $ à tout moment pendant la durée du contrat afin de profiter de la réduction de capacité.  Étant donné qu’il est pris en charge uniquement pour les déploiements sur site, ce modèle de facturation ne permet pas de réaffecter les dépenses des services sur site aux services cloud.  Un exemple de réduction de capacité annuelle est illustré dans l’image suivante.
+
+image:reallocation.png["logique de réallocation expliquée"]
+
+
+
+=== Réaffectation des dépenses trimestrielles
+
+Keystone STaaS vous offre la possibilité de réaffecter les dépenses de service sur site aux dépenses Cloud Volumes ONTAP .
+
+Exigences et conditions au niveau de l'abonnement :
+
+* S'applique uniquement au modèle de facturation mensuelle à terme échu.
+* S'applique uniquement aux abonnements avec des engagements de 1, 2 ou 3 ans.
+* La capacité pour les services Cloud Volumes ONTAP et Cloud Backup doit être achetée via Keystone.
+* Jusqu'à 25 % des paiements mensuels existants basés sur les services sur site peuvent être utilisés pour une réaffectation aux services cloud.
+* Les demandes de réaffectation ne sont effectives qu'après 90 jours à compter de la date d'activation précédente de la réaffectation.
+* La réaffectation ne peut pas être effectuée à partir des services cloud vers les services sur site.
+* Une demande de réaffectation doit être officiellement soumise par le client ou le partenaire à Keystone Success Manager (KSM) au moins une semaine avant le prochain cycle de facturation.
+* Les nouvelles demandes ne prennent effet qu'à partir du cycle de facturation consécutif.
+
+
+Vous pouvez allouer une partie de vos dépenses à vos niveaux de service de performance de stockage de fichiers, de blocs ou d'objets souscrits aux services de stockage cloud hybride.  Jusqu'à 25 % de la valeur annuelle du contrat (ACV) peuvent être réaffectés chaque trimestre aux services Cloud Volumes ONTAP Primary et Cloud Volumes ONTAP Secondary :
+
+image:reallocation.png["logique de réallocation expliquée"]
+
+Ce tableau fournit un ensemble d’exemples de valeurs pour démontrer comment fonctionne la réaffectation des dépenses.  Dans cet exemple, `$5000` les dépenses mensuelles sont réaffectées au service de stockage cloud hybride.
+
+|===
+
+
+| *Avant l'attribution* | *Capacité (Tio)* | *Dépense mensuelle désignée* 
+
+
+| Extrême | 125 | 37 376 
+
+
+| *Après réaffectation* | *Capacité (Tio)* | *Dépense mensuelle désignée* 
+
+
+| Extrême | 108 | 37 376 
+
+
+| Cloud Volumes ONTAP | 47 | 5 000 
+
+
+|  |  | 37 376 
+|===
+La réduction est de (125-108) = 17 TiB de la capacité allouée au niveau de service de performance Extreme.  Lors de la réaffectation des dépenses, le stockage cloud hybride alloué n'est pas de 17 Tio mais d'une capacité équivalente que 5 000 $ peuvent acheter.  Dans cet exemple, pour 5 000 $, vous pouvez obtenir une capacité de stockage sur site de 17 Tio pour le niveau de service de performances Extreme et une capacité de cloud hybride de 47 Tio pour le niveau de service de performances Cloud Volumes ONTAP .  Par conséquent, la réaffectation porte sur les dépenses et non sur la capacité.
+
+Contactez votre Keystone Success Manager (KSM) si vous souhaitez réaffecter les dépenses de vos services sur site vers les services cloud.

@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: integrations/assets-tab.html 
+keywords: keystone-aiq, digital advisor keystone, keystone reports, alerts, keystone dashboard, keystone assets tab, ONTAP, StorageGRID, bluexp, volumes in clusters 
+summary: 'Utilisez l"onglet Ressources pour afficher les détails des clusters et nœuds ONTAP , ainsi que des grilles, sites et nœuds StorageGRID gérés par vos abonnements Keystone .' 
+---
+= Afficher les actifs associés à un abonnement Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez afficher des informations détaillées sur les clusters et les nœuds ONTAP , ainsi que sur les grilles, les sites et les nœuds StorageGRID , gérés par un seul abonnement Keystone .  Cette vue de vos actifs d'abonnement est disponible dans les vues du tableau de bord Keystone de BlueXP et de Digital Advisor.
+
+
+
+== Afficher les ressources d'abonnement Keystone depuis BlueXP
+
+L'onglet *Actifs* dans l'onglet *Abonnements* dans BlueXP fournit des informations détaillées sur les volumes dans les clusters, les nœuds StorageGRID et les nœuds ONTAP associés à l'abonnement, y compris divers détails et l'état de la capacité.
+
+
+NOTE: Cette vue est limitée à un abonnement Keystone à la fois.  Vous pouvez également voir les actifs d'autres abonnements en sélectionnant dans la liste déroulante *ID de suivi*.  Le tableau de bord Keystone dans BlueXP vous permet d'afficher les ressources de plusieurs abonnements Keystone .  Pour en savoir plus, consultezlink:../integrations/assets.html["Afficher les ressources de vos abonnements Keystone"] .
+
+Vous pouvez consulter ces informations en suivant ces étapes :
+
+[role="tabbed-block"]
+====
+.Volumes en clusters
+--
+.Étapes
+. Dans le menu de navigation de gauche de BlueXP , sélectionnez *Stockage > Keystone > Abonnements*.
+. Sélectionnez le numéro d'abonnement dans la colonne *Numéro d'abonnement* du tableau.
++
+Vous êtes redirigé vers l'onglet *Consommation actuelle*.
+
+. Sélectionnez l’onglet *Actifs*.
+. Sélectionnez *Volumes du cluster* dans la liste déroulante *Affichage*.
++
+image:bxp-volumes-clusters-single-subscription.png["Une capture d'écran des volumes en clusters pour un abonnement"]
+
++
+Vous voyez les informations détaillées sur les volumes dans les clusters, y compris le nom du volume, le numéro de série du nœud, la conformité aux politiques QoS, le nom du cluster, le nom de l'hôte et les niveaux de service de performances.  Vous pouvez également surveiller la capacité provisionnée, l’utilisation logique et physique et les données froides.
+
++
+
+TIP: Vous pouvez personnaliser le tableau à l'aide du sélecteur de colonnesimage:column-selector.png["icône de sélecteur de colonne"] icône et utilisez la barre de recherche en haut pour rechercher et filtrer les données du tableau en fonction des paramètres de la colonne.
+
+
+
+--
+.Nœuds dans les clusters
+--
+.Étapes
+. Dans le menu de navigation de gauche de BlueXP , sélectionnez *Stockage > Keystone > Abonnements*.
++
+Par défaut, l'onglet *Abonnements* affiche le sous-onglet *Abonnements*.
+
+. Sélectionnez le numéro d'abonnement dans la colonne *Numéro d'abonnement* du tableau.
++
+Vous êtes redirigé vers l'onglet *Consommation actuelle*.
+
+. Sélectionnez l’onglet *Actifs*.
+. Sélectionnez *Nœuds dans les clusters* dans la liste déroulante *Affichage*.
++
+image:bxp-nodes-cluster-single-subscription.png["Une capture d'écran des nœuds dans les clusters pour un abonnement"]
+
++
+Vous voyez les détails du cluster ONTAP , répartis par paramètres d'efficacité de stockage, type de plate-forme et détails de capacité.
+
++
+
+TIP: Vous pouvez personnaliser le tableau à l'aide du sélecteur de colonnesimage:column-selector.png["icône de sélecteur de colonne"] icône et utilisez la barre de recherche en haut pour rechercher et filtrer les données du tableau en fonction des paramètres de la colonne.
+
+
+
+--
+.Nœuds dans les grilles
+--
+.Étapes
+. Dans le menu de navigation de gauche de BlueXP , sélectionnez *Stockage > Keystone > Abonnements*.
++
+Par défaut, l'onglet *Abonnements* affiche le sous-onglet *Abonnements*.
+
+. Sélectionnez le numéro d'abonnement dans la colonne *Numéro d'abonnement* du tableau.
++
+Vous êtes redirigé vers l'onglet *Consommation actuelle*.
+
+. Sélectionnez l’onglet *Actifs*.
+. Sélectionnez *Nœuds dans les grilles* dans la liste déroulante *Affichage*.
++
+image:bxp-nodes-grids-single-subscription.png["Une capture d'écran des nœuds dans les grilles pour un abonnement"]
+
++
+Vous pouvez afficher des informations détaillées sur les nœuds dans les grilles, notamment le nom du nœud, l'état du nœud, le nom de la grille, le type de nœud et le client.  Vous pouvez également surveiller la capacité de données consommée et disponible, l'utilisation du processeur et la capacité de données utilisable.
+
++
+
+TIP: Vous pouvez personnaliser le tableau à l'aide du sélecteur de colonnesimage:column-selector.png["icône de sélecteur de colonne"] icône et utilisez la barre de recherche en haut pour rechercher et filtrer les données du tableau en fonction des paramètres de la colonne.
+
+
+
+--
+====
+
+
+== Consultez les actifs d'abonnement Keystone de Digital Advisor
+
+L'onglet *Actifs* du tableau de bord Keystone dans Digital Advisor comprend deux sous-onglets : * ONTAP* et * StorageGRID*.  Cet onglet accumule les informations au niveau du cluster pour ONTAP et les informations au niveau de la grille pour StorageGRID en fonction de vos abonnements, en séparant et en présentant les données avec des détails précis.  Vous pouvez consulter ces informations en cliquant sur les sous-onglets respectifs.
+
+[role="tabbed-block"]
+====
+.ONTAP
+--
+.Étapes
+. Cliquez sur *Général > Abonnements Keystone > Actifs > ONTAP*.
+. Sélectionnez le numéro d’abonnement pour lequel vous souhaitez afficher les clusters.
++
+Vous voyez les détails du cluster, répartis par paramètres d'efficacité de stockage, type de plate-forme et détails de capacité.  En cliquant sur l'un des clusters, vous accédez au widget *Clusters* sur l'écran Digital Advisor , où vous obtenez des informations supplémentaires pour ce cluster.  Digital Advisor fournit des informations complètes sur l'inventaire de vos déploiements.
+
++
+image:assets-tab-3.png["capture d'écran pour afficher les informations au niveau du cluster pour ONTAP"]
+
+
+
+--
+.StorageGRID
+--
+.Étapes
+. Cliquez sur *Général > Abonnements Keystone > Ressources > StorageGRID*.
+. Sélectionnez le numéro d'abonnement.
++
+Vous voyez les détails de la grille, classés par identifiants de grille et de nœud, informations sur le site, spécifications matérielles et détails de capacité, qui aident à surveiller et à gérer les nœuds de votre infrastructure StorageGRID .
+
++
+image:assets-tab-storagegrid.png["capture d'écran pour afficher les informations au niveau de la grille pour StorageGRID"]
+
+
+
+--
+====
+*Informations connexes*
+
+* link:../integrations/dashboard-overview.html["Comprendre le tableau de bord Keystone"]
+* link:../integrations/subscriptions-tab.html["Consultez les détails de votre abonnement"]
+* link:../integrations/current-usage-tab.html["Consultez les détails de votre consommation actuelle"]
+* link:../integrations/consumption-tab.html["Voir les tendances de consommation"]
+* link:../integrations/subscription-timeline.html["Consultez la chronologie de votre abonnement"]
+* link:../integrations/assets.html["Afficher les ressources de vos abonnements Keystone"]
+* link:../integrations/volumes-objects-tab.html["Afficher les détails des volumes et des objets"]
+

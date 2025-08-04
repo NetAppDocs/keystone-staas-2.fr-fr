@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: concepts/operational-models.html 
+keywords: Operational models, partner operations, customer operations, roles and responsibilities, r&r 
+summary: NetApp Keystone STaaS propose deux modèles opérationnels pour la fourniture de services.  Vous devez comprendre ces options avant de commencer avec Keystone. 
+---
+= Modèles opérationnels dans Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Keystone STaaS propose deux modèles opérationnels pour la prestation de services : le modèle exploité par le partenaire et le modèle exploité par le client.  Vous devez comprendre ces options avant de commencer avec Keystone.
+
+* *Modèle exploité par un partenaire* : Ce modèle offre deux options :
++
+** *Fournisseur de services* : Un fournisseur de services exploite les services pour ses clients finaux.  En tant que partie contractante avec NetApp, le fournisseur de services gère un environnement multi-locataire dans lequel chaque locataire, qui est un client du fournisseur de services, dispose de son propre abonnement, facturé par le fournisseur de services.  L'administrateur du prestataire de services est chargé d'effectuer toutes les tâches administratives pour les locataires.
+** *Revendeur* : En tant que revendeur, un partenaire agit comme un pont entre NetApp et le client.  Le partenaire vend les services Keystone au client final et gère la facturation.  Pendant que le partenaire s'occupe de la facturation, NetApp fournit une assistance directe au client.  Le support Keystone interagit avec le client et gère toutes les tâches administratives pour les locataires.
+
+
+* *Modèle géré par le client* : En tant que client, vous pouvez vous abonner aux services Keystone en fonction des niveaux de service de performance et de stockage que vous avez sélectionnés.  NetApp définit l’architecture et les produits et déploie Keystone dans vos locaux.  Vous devez gérer l’infrastructure via vos ressources de stockage et informatiques.  En fonction de votre contrat, vous pouvez formuler des demandes de service qui doivent être traitées par NetApp ou votre fournisseur de services.  Un administrateur de votre organisation peut effectuer les tâches administratives sur votre site (environnement).  Ces tâches sont associées aux utilisateurs de votre environnement.
+
+
+
+
+== Rôles et responsabilités tout au long du cycle de vie du service
+
+* *Modèle exploité par un partenaire* : La répartition des rôles et des responsabilités dépend de l'accord entre vous et le prestataire de services ou le partenaire.  Contactez votre fournisseur de services pour plus d'informations.
+* *Modèle exploité par le client* : Le tableau suivant résume le modèle global du cycle de vie des services ainsi que les rôles et responsabilités qui leur sont associés dans un environnement exploité par le client.
+
+
+|===
+| Tâche | NetApp | Client 
+
+
+ a| 
+Installation et tâches connexes
+
+* Installation
+* Configure
+* Déployer
+* À bord
+
+| image:check.png["coche"] | Aucune 
+
+
+ a| 
+Administration et suivi
+
+* Moniteur
+* Rapport
+* Effectuer des tâches administratives
+* Alerte
+
+| Aucune | image:check.png["coche"] 
+
+
+ a| 
+Opérations et optimisation
+
+* Gérer la capacité
+* Gérer les performances
+* Gérer les SLA
+
+| Aucune | image:check.png["coche"] 
+
+
+ a| 
+Support
+
+* Assistance client
+* Réparation de panne matérielle
+* Support logiciel
+* Mises à niveau et correctifs
+
+| image:check.png["coche"] | Aucune 
+|===
+Pour plus d'informations sur le déploiement, voirlink:../concepts/infra.html["Infrastructures Keystone"] etlink:..//concepts/components.html["Composants pour le déploiement"] .

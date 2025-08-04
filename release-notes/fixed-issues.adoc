@@ -1,0 +1,292 @@
+---
+sidebar: sidebar 
+permalink: release-notes/fixed-issues.html 
+keywords: fixed issues 
+summary: Les problèmes détectés dans les versions précédentes des services NetApp Keystone STaaS ont été corrigés dans les versions ultérieures. 
+---
+= Problèmes résolus dans Keystone STaaS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Les problèmes détectés dans les versions précédentes des services NetApp Keystone STaaS ont été corrigés dans les versions ultérieures.
+
+[cols="3*"]
+|===
+| Description du problème | Après la réparation | Corrigé dans la version 
+
+
+ a| 
+Dans l'onglet *Actifs*, les actifs pour StorageGRID ne sont pas visibles.
+ a| 
+Fixé
+ a| 
+19/06/2025
+
+
+
+ a| 
+Pour le niveau de service Advance Data-Protect, dans l'onglet *Tendance de consommation*, le graphique affiche une répartition entre les sites principaux et miroirs.
+ a| 
+Le graphique n’affiche plus de répartition entre les sites principaux et miroirs.
+ a| 
+19/06/2025
+
+
+
+ a| 
+Lorsque le collecteur Keystone existant installé à l'aide d'un package Debian tente de configurer un proxy HTTP ou d'activer Unified Manager via l'interface utilisateur de gestion Keystone Collector, l'interface utilisateur de gestion ne répond plus.
+ a| 
+Fixé
+ a| 
+19/05/2025
+
+
+
+ a| 
+Keystone Collector pour StorageGRID ne parvient pas à se configurer correctement en raison de paramètres communs manquants.
+ a| 
+Fixé
+ a| 
+12/05/2025
+
+
+
+ a| 
+Keystone Collector ne parvient pas à collecter les données d'utilisation pour les clusters ONTAP exécutant des versions inférieures à 9.11.
+ a| 
+Fixé
+ a| 
+30/04/2025
+
+
+
+ a| 
+Les valeurs de consommation des abonnements liés affichent des nombres négatifs incorrects, ce qui entraîne un affichage inexact de l'utilisation totale engagée à un niveau élevé.
+ a| 
+Fixé
+ a| 
+14/04/2025
+
+
+
+ a| 
+Impossible d'afficher les données historiques dans l'onglet *Tendance de consommation* pour les niveaux de service pour quelques abonnements.
+ a| 
+Fixé
+ a| 
+14/04/2025
+
+
+
+ a| 
+Option *Abonnements Keystone * manquante dans *Liste de surveillance* et option *Numéro d'abonnement* dans *Rapports* sur le tableau de bord de Digital Advisor .
+ a| 
+Fixé
+ a| 
+19/03/2025
+
+
+
+ a| 
+Il manque quelques abonnements Keystone dans la *Liste de surveillance* après avoir créé ou modifié la liste de surveillance à partir du tableau de bord Digital Advisor .
+ a| 
+Fixé
+ a| 
+19/03/2025
+
+
+
+ a| 
+Impossible d'afficher les données historiques dans l'onglet *Tendance de consommation* pour les niveaux de service associés à un abonnement qui a expiré et a été renouvelé avec le même ID de suivi mais des niveaux de service différents.
+ a| 
+Fixé
+ a| 
+19/03/2025
+
+
+
+ a| 
+Impossible de générer des rapports pour les abonnements lors de la sélection de plus de 10 à 12 abonnements dans l'onglet *Abonnements* sur la page *Abonnements Keystone *.
+ a| 
+Fixé
+ a| 
+08/01/2025
+
+
+
+ a| 
+Le sous-onglet *Résumé du volume* dans l'onglet *Volumes et objets* ne parvient pas à se charger pour les abonnements StorageGrid.
+ a| 
+Fixé
+ a| 
+21/11/2024
+
+
+
+ a| 
+Le champ *Date de début* permettant de sélectionner la plage de dates affiche une date future par défaut lors de la navigation vers l'onglet *Tendance de consommation*.
+ a| 
+Fixé
+ a| 
+04/09/2024
+
+
+
+ a| 
+L'interface utilisateur de gestion du collecteur Keystone ne répond plus lors de la configuration des politiques AQoS.
+ a| 
+Fixé
+ a| 
+07/08/2024
+
+
+
+ a| 
+Les graphiques d'utilisation affichent les données au-delà de la période d'un jour spécifiée lorsque la date correspondant au jour actuel est sélectionnée comme date de début et de fin pour le mois précédent à partir de l'option *Tendance de capacité* dans l'onglet *Tendances de capacité*.
+ a| 
+Les graphiques d'utilisation affichent désormais correctement les données pour la période d'un jour spécifiée.
+ a| 
+27/06/2024
+
+
+
+ a| 
+Les données historiques accumulées en rafale ne sont pas disponibles pour les niveaux de service *CVO Primary* et *CVO Secondary* dans l'onglet *Capacity Trend* pour les abonnements qui ne sont pas configurés avec une configuration MetroCluster .
+ a| 
+Fixé
+ a| 
+21/06/2024
+
+
+
+ a| 
+Affichage incorrect de la valeur de stockage d'objets consommée répertoriée dans l'onglet *Détails du volume* pour les abonnements AutoSupport .
+ a| 
+La valeur consommée pour le stockage d'objets s'affiche désormais correctement.
+ a| 
+21/06/2024
+
+
+
+ a| 
+Impossible d'afficher les informations au niveau du cluster dans l'onglet *Actifs* pour les abonnements AutoSupport configurés avec une configuration MetroCluster .
+ a| 
+Fixé
+ a| 
+21 juin 2024
+
+
+
+ a| 
+Mauvais placement des données Keystone dans les rapports CSV si la colonne *Nom du compte* dans les rapports CSV, générés à partir de l'onglet *Tendance de capacité*, inclut un nom de compte avec une virgule `(,)` .
+ a| 
+Les données Keystone sont correctement alignées dans les rapports CSV.
+ a| 
+29/05/2024
+
+
+
+ a| 
+Affichez l'utilisation en rafale accumulée à partir de l'onglet *Tendance de capacité* même si la consommation est inférieure à la capacité engagée.
+ a| 
+Fixé
+ a| 
+29/05/2024
+
+
+
+ a| 
+Texte d'infobulle incorrect pour l'icône d'index *Current Burst* dans l'onglet *Capacity Trend*.
+ a| 
+Affiche le texte d'info-bulle correct « _La quantité de capacité d'éclatement actuellement consommée.  Notez que ceci concerne la période de facturation en cours et non la plage de dates sélectionnée._"
+ a| 
+28/03/2024
+
+
+
+ a| 
+Les informations sur les volumes non conformes AQoS et les partenaires MetroCluster ne sont pas disponibles pour les abonnements AutoSupport si les données Keystone ne sont pas présentes pendant 24 heures.
+ a| 
+Fixé
+ a| 
+28/03/2024
+
+
+
+ a| 
+Incohérence occasionnelle dans le nombre de volumes non conformes AQoS répertoriés dans les onglets *Résumé du volume* et *Détails du volume* s'il existe deux niveaux de service attribués à un volume qui satisfait à la conformité AQoS pour un seul niveau de service.
+ a| 
+Fixé
+ a| 
+28/03/2024
+
+
+
+ a| 
+Aucune information n'est disponible dans l'onglet *Actifs* pour les abonnements AutoSupport .
+ a| 
+Fixé
+ a| 
+14/03/2024
+
+
+
+ a| 
+Si MetroCluster et FabricPool étaient tous deux activés dans un environnement où les plans tarifaires pour la hiérarchisation et le stockage d'objets étaient applicables, les niveaux de service pourraient être dérivés de manière incorrecte pour les volumes miroir (volumes constitutifs et volumes FabricPool ).
+ a| 
+Les niveaux de service corrects sont appliqués aux volumes miroir.
+ a| 
+29/02/2024
+
+
+
+ a| 
+Pour certains abonnements ayant un seul niveau de service ou plan tarifaire, la colonne de conformité AQoS manquait dans la sortie CSV des rapports de l'onglet *Volumes*.
+ a| 
+La colonne de conformité est visible dans les rapports.
+ a| 
+29/02/2024
+
+
+
+ a| 
+Dans certains environnements MetroCluster , une anomalie occasionnelle a été détectée dans les graphiques de densité IOPS dans l'onglet *Performance*.  Cela s'est produit en raison d'une correspondance inexacte entre les volumes et les niveaux de service.
+ a| 
+Les graphiques sont correctement affichés.
+ a| 
+29/02/2024
+
+
+
+ a| 
+L'indicateur d'utilisation d'un enregistrement de consommation en rafale s'affichait en orange.
+ a| 
+L'indicateur apparaît en rouge.
+ a| 
+13/12/2023
+
+
+
+ a| 
+La plage de dates et les données des onglets Tendance de capacité, Utilisation actuelle et Performances n'ont pas été converties en fuseau horaire UTC.
+ a| 
+La plage de dates pour la requête et les données dans tous les onglets sont affichées en heure UTC (fuseau horaire du serveur).  Le fuseau horaire UTC est également affiché pour chaque champ de date dans les onglets.
+ a| 
+13/12/2023
+
+
+
+ a| 
+Il y avait une incompatibilité dans la date de début et la date de fin entre les onglets et les rapports CSV téléchargés.
+ a| 
+Fixé.
+ a| 
+13/12/2023
+
+|===

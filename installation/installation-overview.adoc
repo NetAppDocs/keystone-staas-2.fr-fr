@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: installation/installation-overview.html 
+keywords: installation, Keystone Collector 
+summary: Keystone Collector est un logiciel NetApp que vous installez sur un hôte VMware vSphere ou Linux sur votre site.  Il collecte des données d’utilisation pour les systèmes Keystone . 
+---
+= En savoir plus sur Keystone Collector
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+_Keystone Collector_ est un logiciel NetApp que vous installez sur un hôte VMware vSphere ou Linux sur votre site pour accéder à vos services Keystone .  Il collecte des données d’utilisation pour les systèmes Keystone .
+
+Keystone Collector est le composant d'acquisition d'utilisation de la plateforme de facturation Keystone .  Il exploite Active IQ Unified Manager et d'autres applications pour se connecter aux systèmes ONTAP et StorageGRID afin de collecter les métadonnées requises pour l'utilisation et la mesure des performances de vos abonnements Keystone .  Il vous offre la possibilité de surveiller l'état du système, tout en envoyant vos données de facturation pour la création de rapports.
+
+Keystone Collector peut être configuré soit en mode _standard_, qui fonctionne sans restrictions de connectivité, soit en mode _privé_, conçu pour les organisations avec des restrictions de connectivité.  Pour installer Keystone Collector en mode standard, reportez-vous àlink:../installation/vapp-prereqs.html["Installer et configurer Keystone"] ; pour le mode privé, reportez-vous àlink:../dark-sites/overview.html["Keystone en mode privé"] .
+
+Keystone Collector représente l'approche standard de collecte de données d'utilisation pour les systèmes Keystone .  Si votre environnement ne peut pas prendre en charge Keystone Collector, vous pouvez demander l'autorisation au support Keystone d'utiliser le mécanisme de télémétrie AutoSupport comme alternative.  Pour plus d'informations sur AutoSupport, consultez https://docs.netapp.com/us-en/active-iq/concept_autosupport.html["AutoSupport"^] .  Pour plus d'informations sur la configuration AutoSupport pour Keystone, consultezlink:../installation/asup-config.html["Configurer AutoSupport pour Keystone"] .
+
+Ce diagramme d’architecture décrit les composants constitutifs et leur connectivité dans un environnement Keystone typique.
+
+image:collector-arch-1.png["architecture de collection"]

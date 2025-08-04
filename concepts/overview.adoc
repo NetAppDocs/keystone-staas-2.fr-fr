@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: concepts/overview.html 
+keywords: learn about keystone, keystone introduction, keystone, STaaS, service, offering, overview 
+summary: 'Keystone est un modèle de service par abonnement, basé sur le paiement à mesure de votre croissance, destiné aux entreprises qui préfèrent les modèles de consommation OpEx aux dépenses d"investissement initiales ou à la location.' 
+---
+= En savoir plus sur NetApp Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Keystone est un modèle de service par abonnement à paiement à l'utilisation qui offre une expérience de cloud hybride transparente aux entreprises qui préfèrent les modèles de consommation des dépenses opérationnelles aux dépenses d'investissement initiales ou à la location pour répondre à leurs besoins de stockage et de protection des données.
+
+Avec Keystone, vous bénéficiez de :
+
+* *Rentabilité des coûts* : Payez uniquement pour le stockage dont vous avez besoin avec la flexibilité de gérer une capacité supplémentaire.
+* *Efficacité du capital* : accédez à un stockage de niveau entreprise sans investissements initiaux.
+* *Évolutivité* : augmentez facilement votre capacité de stockage à mesure que votre entreprise se développe.
+* *Personnalisation* : Ajustez vos plans de stockage et passez au cloud selon vos besoins, optimisant ainsi vos coûts globaux.
+* *Intégration cloud* : combinez les services sur site et cloud sous un seul abonnement.
+* *Sécurité* : Protégez vos données avec des mesures de sécurité avancées et une récupération garantie contre les menaces.
+
+
+image:keystone-benefit-1.png["Avantages Keystone"]
+
+Keystone fournit une capacité de stockage à des niveaux de service de performances prédéfinis pour les types de stockage de fichiers, de blocs et d'objets.  Ce stockage peut être déployé sur site et exploité par NetApp, un partenaire ou le client.  Keystone peut être utilisé en association avec les services cloud NetApp , tels que Cloud Volumes ONTAP, qui peuvent être déployés sur un environnement hyperscalaire de votre choix.
+
+
+
+== Stockage Keystone en tant que service (STaaS)
+
+Les offres de stockage en tant que service (STaaS) visent à fournir un modèle de type cloud public pour l'approvisionnement, le déploiement et la gestion de l'infrastructure de stockage.  Alors que de nombreuses entreprises travaillent encore sur leur stratégie de cloud hybride, Keystone STaaS offre la flexibilité de commencer avec des services sur site et de passer au cloud lorsque le moment est venu.  Cela vous permet de protéger vos engagements sur différents modèles de déploiement, en réaffectant vos dépenses selon vos besoins sans augmenter votre facture mensuelle.
+
+*Informations connexes*
+
+* link:../concepts/pricing.html["Tarification Keystone"]
+* link:../concepts/add-on.html["Services complémentaires dans Keystone STaaS"]
+* link:../concepts/service-levels.html["Niveaux de service de performance dans Keystone"]
+* link:../concepts/infra.html["Infrastructures Keystone"]
+* link:../concepts/operational-models.html["Modèles opérationnels dans Keystone"]
+

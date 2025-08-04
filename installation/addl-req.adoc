@@ -1,0 +1,125 @@
+---
+sidebar: sidebar 
+permalink: installation/addl-req.html 
+keywords: keystone unified manager prerequisites, aiqum config keystone 
+summary: Avant de commencer à utiliser Keystone, vous devez vous assurer que les clusters ONTAP et les systèmes StorageGRID répondent à quelques exigences. 
+---
+= Exigences pour ONTAP et StorageGRID
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Avant de commencer à utiliser Keystone, vous devez vous assurer que les clusters ONTAP et les systèmes StorageGRID répondent à quelques exigences.
+
+[role="tabbed-block"]
+====
+.ONTAP
+--
+.Versions du logiciel
+. ONTAP 9.8 ou version ultérieure
+. Active IQ Unified Manager (Unified Manager) 9.10 ou version ultérieure
+
+
+.Avant de commencer
+Répondez aux exigences suivantes si vous avez l’intention de collecter des données d’utilisation uniquement via ONTAP:
+
+. Assurez-vous que ONTAP 9.8 ou une version ultérieure est configuré.  Pour plus d'informations sur la configuration d'un nouveau cluster, consultez ces liens :
++
+** https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["Configurer ONTAP sur un nouveau cluster avec System Manager"]
+** https://docs.netapp.com/us-en/ontap/software_setup/task_create_the_cluster_on_the_first_node.html["Configurer un cluster avec la CLI"]
+
+
+. Créez des comptes de connexion ONTAP avec des rôles spécifiques.  Pour en savoir plus, consultez https://docs.netapp.com/us-en/ontap/authentication/create-svm-user-accounts-task.html#cluster-and-svm-administrators["En savoir plus sur la création de comptes de connexion ONTAP"] .
++
+** *Interface Web*
++
+... Connectez-vous à ONTAP System Manager à l’aide de vos informations d’identification par défaut.  Pour en savoir plus, consultez https://docs.netapp.com/us-en/ontap/concept_administration_overview.html["Gestion des clusters avec System Manager"] .
+... Créez un utilisateur ONTAP avec le rôle « lecture seule » et le type d'application « http » et activez l'authentification par mot de passe en accédant à *Cluster > Paramètres > Sécurité > Utilisateurs*.
+
+
+** *CLI*
++
+... Connectez-vous à ONTAP CLI en utilisant vos informations d’identification par défaut.  Pour en savoir plus, consultez https://docs.netapp.com/us-en/ontap/system-admin/index.html["Gestion des clusters avec CLI"] .
+... Créez un utilisateur ONTAP avec le rôle « lecture seule » et le type d’application « http » et activez l’authentification par mot de passe.  Pour en savoir plus sur l'authentification, reportez-vous à https://docs.netapp.com/us-en/ontap/authentication/enable-password-account-access-task.html["Activer l'accès par mot de passe au compte ONTAP"] .
+
+
+
+
+
+
+Répondez aux exigences suivantes si vous avez l’intention de collecter des données d’utilisation via Active IQ Unified Manager:
+
+. Assurez-vous que Unified Manager 9.10 ou une version ultérieure est configuré.  Pour plus d'informations sur l'installation d'Unified Manager, consultez ces liens :
++
+** https://docs.netapp.com/us-en/active-iq-unified-manager/install-vapp/concept_requirements_for_installing_unified_manager.html["Installation d'Unified Manager sur les systèmes VMware vSphere"^]
+** https://docs.netapp.com/us-en/active-iq-unified-manager/install-linux/concept_requirements_for_install_unified_manager.html["Installation d'Unified Manager sur les systèmes Linux"^]
+
+
+. Assurez-vous que le cluster ONTAP a été ajouté à Unified Manager.  Pour plus d'informations sur l'ajout de clusters, voir https://docs.netapp.com/us-en/active-iq-unified-manager/config/task_add_clusters.html["Ajout de clusters"^] .
+. Créez des utilisateurs Unified Manager avec des rôles spécifiques pour la collecte de données d’utilisation et de performances.  Effectuez ces étapes.  Pour plus d'informations sur les rôles d'utilisateur, voir https://docs.netapp.com/us-en/active-iq-unified-manager/config/reference_definitions_of_user_roles.html["Définitions des rôles d'utilisateur"^] .
++
+.. Connectez-vous à l'interface Web d'Unified Manager avec les informations d'identification de l'administrateur d'application par défaut générées lors de l'installation.  Voir https://docs.netapp.com/us-en/active-iq-unified-manager/config/task_access_unified_manager_web_ui.html["Accéder à l'interface Web d'Unified Manager"^] .
+.. Créez un compte de service pour Keystone Collector avec `Operator` rôle d'utilisateur.  Les API du service Keystone Collector utilisent ce compte de service pour communiquer avec Unified Manager et collecter des données d’utilisation.  Voir https://docs.netapp.com/us-en/active-iq-unified-manager/config/task_add_users.html["Ajout d'utilisateurs"^] .
+.. Créer un `Database` compte utilisateur, avec le `Report Schema` rôle.  Cet utilisateur est requis pour la collecte de données de performances.  Voir https://docs.netapp.com/us-en/active-iq-unified-manager/config/task_create_database_user.html["Création d'un utilisateur de base de données"^] .
++
+
+NOTE: Le port par défaut de MySQL, 3306, est limité uniquement à localhost lors d'une nouvelle installation de Unified Manager, ce qui empêche la collecte de données de performances pour Keystone ONTAP.  Cette configuration peut être modifiée et la connexion peut être rendue disponible à d'autres hôtes à l'aide du `Control access to MySQL port 3306` option sur la console de maintenance Unified Manager.  Pour plus d'informations, voirlink:https://docs.netapp.com/us-en/active-iq-unified-manager/config/reference_additional_menu_options.html["Options de menu supplémentaires"^] .
+
+
+
+. Activer la passerelle API dans Unified Manager.  Keystone Collector utilise la fonctionnalité API Gateway pour communiquer avec les clusters ONTAP .  Vous pouvez activer API Gateway soit à partir de l'interface utilisateur Web, soit en exécutant quelques commandes via Unified Manager CLI.
++
+.Interface utilisateur Web
+Pour activer API Gateway à partir de l'interface utilisateur Web d'Unified Manager, connectez-vous à l'interface utilisateur Web d'Unified Manager et activez API Gateway.  Pour plus d'informations, voir https://docs.netapp.com/us-en/active-iq-unified-manager/config/concept_api_gateway.html["Activation de la passerelle API"^] .
+
++
+.CLI
+Pour activer la passerelle API via Unified Manager CLI, procédez comme suit :
+
++
+.. Sur le serveur Unified Manager, démarrez une session SSH et connectez-vous à l'interface de ligne de commande Unified Manager.
+`um cli login -u _<umadmin>_`  Pour plus d'informations sur les commandes CLI, voir https://docs.netapp.com/us-en/active-iq-unified-manager/events/reference_supported_unified_manager_cli_commands.html["Commandes CLI Unified Manager prises en charge"^] .
+.. Vérifiez si API Gateway est déjà activé.
+`um option list api.gateway.enabled`  UN `true` la valeur indique que la passerelle API est activée.
+.. Si la valeur renvoyée est `false` , exécutez cette commande :
+`um option set api.gateway.enabled=true`
+.. Redémarrez le serveur Unified Manager :
++
+*** Linux: https://docs.netapp.com/us-en/active-iq-unified-manager/install-linux/task_restart_unified_manager.html["Redémarrage d'Unified Manager"^] .
+*** VMware vSphere : https://docs.netapp.com/us-en/active-iq-unified-manager/install-vapp/task_restart_unified_manager_virtual_machine.html["Redémarrage de la machine virtuelle Unified Manager"^] .
+
+
+
+
+
+
+--
+.StorageGRID
+--
+Les configurations suivantes sont requises pour l'installation de Keystone Collector sur StorageGRID.
+
+* StorageGRID `11.6.0` ou une version ultérieure doit être installée.  Pour plus d'informations sur la mise à niveau de StorageGRID, consultezlink:https://docs.netapp.com/us-en/storagegrid-116/upgrade/index.html["Mise à niveau du logiciel StorageGRID : Présentation"^] .
+* Un compte utilisateur administrateur local StorageGRID doit être créé pour la collecte des données d’utilisation.  Ce compte de service est utilisé par le service Keystone Collector pour communiquer avec StorageGRID via les API de nœud administrateur.
++
+.Étapes
+.. Connectez-vous au gestionnaire de grille.  Voir https://docs.netapp.com/us-en/storagegrid-116/admin/signing-in-to-grid-manager.html["Sign in au gestionnaire de grille"^] .
+.. Créez un groupe d'administrateurs local avec `Access mode: Read-only` .  Voir https://docs.netapp.com/us-en/storagegrid-116/admin/managing-admin-groups.html#create-an-admin-group["Créer un groupe d'administrateurs"^] .
+.. Ajoutez les autorisations suivantes :
++
+*** Comptes locataires
+*** Entretien
+*** Requête de métriques
+
+
+.. Créez un utilisateur de compte de service Keystone et associez-le au groupe d’administrateurs.  Voir https://docs.netapp.com/us-en/storagegrid-116/admin/managing-users.html["Gérer les utilisateurs"] .
+
+
+
+
+--
+====

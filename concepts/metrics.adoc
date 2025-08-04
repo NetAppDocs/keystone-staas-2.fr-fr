@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: concepts/metrics.html 
+keywords: metrics, GiB, IOPS, latency, durability, v2, version 2 
+summary: Le service NetApp Keystone STaaS utilise plusieurs termes pour mesurer les métriques.  Vous souhaiterez peut-être en savoir plus sur ces conditions lorsque vous utiliserez Keystone pour la version 2 du service. 
+---
+= Métriques et définitions utilisées dans Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le service NetApp Keystone STaaS utilise plusieurs termes pour mesurer les métriques.  Vous souhaiterez peut-être en savoir plus sur ces termes lorsque vous utilisez Keystone.
+
+Les termes et définitions suivants sont utilisés dans le service Keystone STaaS pour mesurer les métriques :
+
+* Unités de mesure de capacité : GiB, TiB et PiB
+* Densité d'E/S : IOPS/TiB : nombre d'opérations d'entrée/sortie traitées par seconde en fonction de l'espace total consommé par la charge de travail, en tebioctets.
+* Disponibilité du service
+* Durabilité de l'accès précis aux données
+* Latence et vitesse
+
+
+
+
+== Mesure des métriques
+
+* *Mesure de capacité en gibioctet (Gio), tébioctet (Tio) et pébioctet (Pio)* : Mesures de la capacité de stockage de données en utilisant la base de 1024 (1 GiB = 1024^3^ octets, 1 TiB = 1024^4^ octets et 1PiB = 1024^5^ octets).
+* *Graphique du compteur d'opérations en IOPS/Tio* : Les opérations de protocole par seconde, demandées par l'application, divisées par la taille du volume utilisé par les charges de travail.
+* *Disponibilité* : Mesurée en pourcentage du nombre de demandes d'E/S auxquelles le service a répondu avec succès, divisé par le nombre total de demandes d'E/S adressées au service.  Ce délai est mesuré à la démarcation du service dans un mois et n'inclut pas les temps d'arrêt de service programmés ou l'indisponibilité des installations, du réseau ou d'autres services fournis par le client.
+* *Durabilité* : Pourcentage de données consultées sans perte de fidélité, hors suppression ou corruption causée par le client.
+* *Latence* : Temps nécessaire pour traiter une demande d'E/S reçue d'un client, mesuré à la démarcation du service (port d'E/S du contrôleur de stockage).
+
+
+
+
+=== Mesures de performance de débit
+
+Les mesures de performance de débit s'appliquent uniquement aux services de fichiers et de blocs en fonction de :
+
+* Tailles de bloc de 32 Ko
+* Mélange d'E/S de 70 % en lecture et 30 % en écriture
+
+
+
+
+=== Variations de la densité d'E/S
+
+La densité d'E/S calculée en IOPS/TiB et/ou MBps/TiB varie en fonction des facteurs suivants :
+
+* Caractéristiques de la charge de travail
+* Latence, à l'exclusion des éléments suivants :
++
+** Latence des applications
+** Latence de l'hôte
+** Latence dans le réseau client lors du transfert de données vers et depuis les ports du contrôleur
+** Latence de surcharge associée au transfert de données vers le magasin d'objets dans le cas de FabricPool
+** La latence appliquée automatiquement par la QoS pour maintenir les E/S dans les limites maximales du niveau de service
+
+
+* Les données de copie utilisateur et Snapshot qui sont comptabilisées comme faisant partie de la capacité utilisée
+* Le nombre minimum absolu d'IOPS alloué sur chaque volume ONTAP , quelle que soit la quantité de données dans le volume :
++
+** Extrême : 1 000 IOPS
+** Premium : 500 IOPS
+** Performances, standard et valeur : 75 IOPS
+
+
+* Lors de l'utilisation des services complémentaires Advanced Data Protection, la latence cible s'applique uniquement au traitement des demandes d'E/S à partir du stockage local.
+
+
+
+
+=== Volume AQoS
+
+Chaque volume ONTAP doit avoir la politique de qualité de service adaptative (AQoS) applicable appliquée.  Dans le cas contraire, la capacité de chaque volume pour laquelle aucune politique AQoS n'est appliquée est facturée au tarif du niveau de service le plus élevé.

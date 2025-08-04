@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: installation/validation.html 
+keywords: validate, validation 
+summary: Le référentiel Keystone est configuré pour valider automatiquement l’intégrité du logiciel Keystone . 
+---
+= Validation automatique du logiciel Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le référentiel Keystone est configuré pour valider automatiquement l'intégrité du logiciel Keystone afin que seuls les logiciels valides et authentiques soient installés sur votre site.
+
+La configuration du client du référentiel Keystone YUM fournie dans `keystonerepo.rpm` utilise la vérification GPG forcée(`gpgcheck=1` ) sur tous les logiciels téléchargés via ce référentiel.  Tout RPM téléchargé via le référentiel Keystone qui échoue à la validation de signature ne peut pas être installé.  Cette fonctionnalité est utilisée dans la capacité de mise à jour automatique planifiée de Keystone Collector pour garantir que seuls des logiciels valides et authentiques sont installés sur votre site.

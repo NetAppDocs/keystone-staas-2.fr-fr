@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: concepts/gssc.html 
+keywords: Keystone support, service request, support ticket 
+summary: Si vous avez besoin d’aide, contactez l’équipe de support NetApp Keystone . 
+---
+= Obtenez de l'aide avec Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'équipe d'assistance NetApp Keystone et Keystone Success Manager (KSM) sont chargés de vous fournir un service pour vos abonnements Keystone .  Si vous avez besoin d’aide, vous pouvez contacter l’équipe d’assistance Keystone .
+
+
+
+== Prise en charge de NetApp Keystone
+
+NetApp fournit des services opérationnels à distance aux clients NetApp Keystone .  Ces services englobent une gamme de disciplines opérationnelles dans les activités de gestion du stockage.  Ces services incluent la gestion des actifs et de la configuration, la gestion des capacités et des performances, la gestion des changements, la gestion des événements, des incidents et des problèmes, l'exécution des demandes de service et la création de rapports.  NetApp démontre un état de contrôle et des preuves à l'appui, comme requis.
+
+
+
+== Informations Complémentaires
+
+NetApp utilise la solution de surveillance ITOM pour surveiller et se connecter de manière proactive à l'environnement NetApp Keystone pour le dépannage.
+
+
+NOTE: Dans un modèle exploité par un partenaire, les demandes de service du locataire et du sous-locataire sont attribuées au service d'assistance du partenaire.  L'outil de support du partenaire peut être intégré à la solution ITOM.
+
+Pour plus d'informations sur les services Keystone , consultez :
+
+* NetApp Keystonehttps://www.netapp.com/us/solutions/keystone/index.aspx["https://www.netapp.com/us/solutions/keystone/index.aspx"^]
+* Documentation produit NetApphttps://docs.netapp.com["https://docs.netapp.com"^]
+
+
+
+
+== Surveillance du support Keystone
+
+Le support NetApp Keystone surveille l'état de vos produits et services souscrits, fournit une assistance à distance et collabore avec votre Keystone Success Manager.
+
+.Responsable de la réussite Keystone
+Le Keystone Success Manager (KSM) travaille en étroite collaboration avec vous sur vos services Keystone et vous informe des rapports de facturation et d'exploitation hebdomadaires ou mensuels.  Les responsabilités sont spécifiées dans votre contrat NetApp Keystone .
+
+
+
+== Génération de demandes de service
+
+Lors de l'intégration, si vous avez reçu des informations d'identification pour accéder et utiliser Netapp Keystone ServiceNow, vous pouvez utiliser le portail pour générer des demandes de service pour les problèmes liés à vos abonnements Keystone :
+
+https://netappgssc.service-now.com/csm[]
+
+Assurez-vous d’avoir les détails du système, les journaux et les informations associées prêts avant de formuler la demande de service.  Lorsque vous faites une demande de service, l'équipe d'assistance Keystone reçoit le ticket d'assistance et accède aux informations pour le dépannage.  Vous pouvez suivre votre ticket ServiceNow pour connaître le statut et la résolution.
+
+Pour plus d'informations sur l'ajout de packs de support, consultezlink:../installation/monitor-health.html["Générer et collecter des lots de support"] .
+
+Si vous avez un dossier/ticket ouvert qui doit être escaladé, envoyez un e-mail à l'une des adresses suivantes : keystone.services@netapp.com keystone.escalations@netapp.com

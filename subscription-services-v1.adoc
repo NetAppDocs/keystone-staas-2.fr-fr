@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: subscription-services-v1.html 
+keywords: Keystone Flex Subscriptions, kfs v1, keystone legacy, Keystone subscription services version 1 
+summary: 'Services d"abonnement Keystone STaaS sur Keystone Flex' 
+---
+= Services d'abonnement Keystone | Version 1
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Keystone STaaS a été précédé par les services d'abonnement Keystone (anciennement connus sous le nom de services d'abonnement Keystone Flex).
+
+Bien que la navigation des deux offres soit similaire dans lelink:./integrations/keystone-bluexp.html["Tableau de bord Keystone"^] Les services d'abonnement Keystone diffèrent de Keystone STaaS en termes de niveaux de service de performance constitutifs, d'offre de services et de principes de facturation.  Depuis avril 2024, NetApp maintient et publie la documentation uniquement pour Keystone STaaS.  Si vous utilisez toujours les services d'abonnement Keystone , contactez votre KSM pour obtenir de l'aide pour la migration vers Keystone STaaS.  Si nécessaire, vous pouvez accéder à une version PDF de la documentation des services d'abonnement Keystone ici :
+
+* https://docs.netapp.com/a/keystone/1.0/keystone-subscription-services-guide.pdf["English"^]
+* https://docs.netapp.com/a/keystone/1.0/keystone-subscription-services-guide-ja-jp.pdf["japonais"^]
+* https://docs.netapp.com/a/keystone/1.0/keystone-subscription-services-guide-ko-kr.pdf["coréen"^]
+* https://docs.netapp.com/a/keystone/1.0/keystone-subscription-services-guide-zh-cn.pdf["chinois (simplifié)"^]
+* https://docs.netapp.com/a/keystone/1.0/keystone-subscription-services-guide-zh-tw.pdf["Chinois (traditionnel)"^]
+* https://docs.netapp.com/a/keystone/1.0/keystone-subscription-services-guide-de-de.pdf["Allemand"^]
+* https://docs.netapp.com/a/keystone/1.0/keystone-subscription-services-guide-es-es.pdf["Espagnol"^]
+* https://docs.netapp.com/a/keystone/1.0/keystone-subscription-services-guide-fr-fr.pdf["Français"^]
+* https://docs.netapp.com/a/keystone/1.0/keystone-subscription-services-guide-it-it.pdf["italien"^]
+

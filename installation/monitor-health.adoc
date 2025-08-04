@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: installation/monitor-health.html 
+keywords: monitoring system health 
+summary: Pour garantir la disponibilité des données, vous pouvez surveiller l’état du collecteur Keystone en utilisant n’importe quel système de surveillance prenant en charge les requêtes HTTP. 
+---
+= Surveiller la santé de Keystone Collector
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez surveiller l’état de santé de Keystone Collector en utilisant n’importe quel système de surveillance prenant en charge les requêtes HTTP.  La surveillance de la santé peut aider à garantir que les données sont disponibles sur le tableau de bord Keystone .
+
+Par défaut, les services de santé Keystone n'acceptent pas les connexions provenant d'une adresse IP autre que localhost.  Le critère d’évaluation de la santé Keystone est `/uber/health` , et il écoute sur toutes les interfaces du serveur Keystone Collector sur le port `7777` .  Lors de la requête, un code d'état de requête HTTP avec une sortie JSON est renvoyé par le point de terminaison en tant que réponse, décrivant l'état du système Keystone Collector.  Le corps JSON fournit un état de santé général pour le `is_healthy` attribut, qui est un booléen ; et une liste détaillée des statuts par composant pour le `component_details` attribut.  Voici un exemple :
+
+[listing]
+----
+$ curl http://127.0.0.1:7777/uber/health
+{"is_healthy": true, "component_details": {"vicmet": "Running", "ks-collector": "Running", "ks-billing": "Running", "chronyd": "Running"}}
+----
+Ces codes d’état sont renvoyés :
+
+* *200* : indique que tous les composants surveillés sont sains
+* *503* : indique qu'un ou plusieurs composants sont défectueux
+* *403*: indique que le client HTTP interrogeant l'état de santé ne figure pas dans la liste _allow_, qui est une liste de CIDR réseau autorisés.  Pour ce statut, aucune information de santé n'est renvoyée.  La liste _allow_ utilise la méthode CIDR réseau pour contrôler les périphériques réseau autorisés à interroger le système de santé Keystone .  Si vous recevez cette erreur, ajoutez votre système de surveillance à la liste _autorisée_ depuis * Keystone Collector management TUI > Configurer > Surveillance de l'état*.
+
+
+.Utilisateurs de Linux, notez ce problème connu :
+
+NOTE: *Description du problème* : Keystone Collector exécute un certain nombre de conteneurs dans le cadre du système de mesure de l'utilisation.  Lorsque le serveur Red Hat Enterprise Linux 8.x est renforcé avec les politiques des guides de mise en œuvre technique de sécurité (STIG) de l'Agence des systèmes d'information de défense des États-Unis (DISA), un problème connu avec fapolicyd (démon de politique d'accès aux fichiers) a été observé par intermittence.  Ce problème est identifié commelink:https://bugzilla.redhat.com/show_bug.cgi?id=1907870["bogue 1907870"^] .  *Solution de contournement* : Jusqu'à ce que Red Hat Enterprise le résolve, NetApp vous recommande de contourner ce problème en mettant `fapolicyd` en mode permissif.  Dans/`etc/fapolicyd/fapolicyd.conf` , définir la valeur de `permissive = 1` .
+
+
+
+== Afficher les journaux système
+
+Vous pouvez afficher les journaux système de Keystone Collector pour examiner les informations système et effectuer un dépannage à l'aide de ces journaux.  Keystone Collector utilise le système de journalisation _journald_ de l'hôte et les journaux système peuvent être consultés via l'utilitaire système standard _journalctl_.  Vous pouvez bénéficier des services clés suivants pour examiner les journaux :
+
+* collectionneur ks
+* ks-santé
+* ks-mise à jour automatique
+
+
+Le service principal de collecte de données _ks-collector_ produit des journaux au format JSON avec un `run-id` attribut associé à chaque tâche de collecte de données planifiée.  Voici un exemple de travail réussi de collecte de données d’utilisation standard :
+
+[listing]
+----
+{"level":"info","time":"2022-10-31T05:20:01.831Z","caller":"light-collector/main.go:31","msg":"initialising light collector with run-id cdflm0f74cgphgfon8cg","run-id":"cdflm0f74cgphgfon8cg"}
+{"level":"info","time":"2022-10-31T05:20:04.624Z","caller":"ontap/service.go:215","msg":"223 volumes collected for cluster a2049dd4-bfcf-11ec-8500-00505695ce60","run-id":"cdflm0f74cgphgfon8cg"}
+
+{"level":"info","time":"2022-10-31T05:20:18.821Z","caller":"ontap/service.go:215","msg":"697 volumes collected for cluster 909cbacc-bfcf-11ec-8500-00505695ce60","run-id":"cdflm0f74cgphgfon8cg"}
+
+{"level":"info","time":"2022-10-31T05:20:41.598Z","caller":"ontap/service.go:215","msg":"7 volumes collected for cluster f7b9a30c-55dc-11ed-9c88-005056b3d66f","run-id":"cdflm0f74cgphgfon8cg"}
+
+{"level":"info","time":"2022-10-31T05:20:48.247Z","caller":"ontap/service.go:215","msg":"24 volumes collected for cluster a9e2dcff-ab21-11ec-8428-00a098ad3ba2","run-id":"cdflm0f74cgphgfon8cg"}
+
+{"level":"info","time":"2022-10-31T05:20:48.786Z","caller":"worker/collector.go:75","msg":"4 clusters collected","run-id":"cdflm0f74cgphgfon8cg"}
+
+{"level":"info","time":"2022-10-31T05:20:48.839Z","caller":"reception/reception.go:75","msg":"Sending file 65a71542-cb4d-bdb2-e9a7-a826be4fdcb7_1667193648.tar.gz type=ontap to reception","run-id":"cdflm0f74cgphgfon8cg"}
+
+{"level":"info","time":"2022-10-31T05:20:48.840Z","caller":"reception/reception.go:76","msg":"File bytes 123425","run-id":"cdflm0f74cgphgfon8cg"}
+
+{"level":"info","time":"2022-10-31T05:20:51.324Z","caller":"reception/reception.go:99","msg":"uploaded usage file to reception with status 201 Created","run-id":"cdflm0f74cgphgfon8cg"}
+----
+Voici un exemple de travail réussi pour la collecte facultative de données de performance :
+
+[listing]
+----
+{"level":"info","time":"2022-10-31T05:20:51.324Z","caller":"sql/service.go:28","msg":"initialising MySql service at 10.128.114.214"}
+
+{"level":"info","time":"2022-10-31T05:20:51.324Z","caller":"sql/service.go:55","msg":"Opening MySql db connection at server 10.128.114.214"}
+
+{"level":"info","time":"2022-10-31T05:20:51.324Z","caller":"sql/service.go:39","msg":"Creating MySql db config object"}
+
+{"level":"info","time":"2022-10-31T05:20:51.324Z","caller":"sla_reporting/service.go:69","msg":"initialising SLA service"}
+
+{"level":"info","time":"2022-10-31T05:20:51.324Z","caller":"sla_reporting/service.go:71","msg":"SLA service successfully initialised"}
+
+{"level":"info","time":"2022-10-31T05:20:51.324Z","caller":"worker/collector.go:217","msg":"Performance data would be collected for timerange: 2022-10-31T10:24:52~2022-10-31T10:29:52"}
+
+{"level":"info","time":"2022-10-31T05:21:31.385Z","caller":"worker/collector.go:244","msg":"New file generated: 65a71542-cb4d-bdb2-e9a7-a826be4fdcb7_1667193651.tar.gz"}
+
+{"level":"info","time":"2022-10-31T05:21:31.385Z","caller":"reception/reception.go:75","msg":"Sending file 65a71542-cb4d-bdb2-e9a7-a826be4fdcb7_1667193651.tar.gz type=ontap-perf to reception","run-id":"cdflm0f74cgphgfon8cg"}
+
+{"level":"info","time":"2022-10-31T05:21:31.386Z","caller":"reception/reception.go:76","msg":"File bytes 17767","run-id":"cdflm0f74cgphgfon8cg"}
+
+{"level":"info","time":"2022-10-31T05:21:33.025Z","caller":"reception/reception.go:99","msg":"uploaded usage file to reception with status 201 Created","run-id":"cdflm0f74cgphgfon8cg"}
+
+{"level":"info","time":"2022-10-31T05:21:33.025Z","caller":"light-collector/main.go:88","msg":"exiting","run-id":"cdflm0f74cgphgfon8cg"}
+----
+
+
+== Générer et collecter des lots de support
+
+L'interface utilisateur Keystone Collector vous permet de générer des lots d'assistance et de les ajouter aux demandes de service pour résoudre les problèmes d'assistance.  Suivez cette procédure :
+
+.Étapes
+. Démarrez l'utilitaire TUI de gestion Keystone Collector :
+`$ keystone-collector-tui`
+. Accédez à *Dépannage > Générer un pack d'assistance*.image:tui-sup-bundl.png["écran tui"]
+. Une fois généré, l'emplacement où le bundle est enregistré est affiché.  Utilisez FTP, SFTP ou SCP pour vous connecter à l’emplacement et télécharger le fichier journal sur un système local.image:tui-sup-bundl-2.png["écran tui"]
+. Une fois le fichier téléchargé, vous pouvez le joindre au ticket d’assistance Keystone ServiceNow.  Pour plus d'informations sur la création de tickets, consultezlink:../concepts/gssc.html["Génération de demandes de service"] .
+

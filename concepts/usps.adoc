@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: concepts/usps.html 
+keywords: netapp, keystone, US citizen support, USPS, Keystone Success Manager, USPS support 
+summary: 'United States Protected Support est un service complémentaire qui fournit la livraison et l"assistance des services Keystone continus des citoyens américains sur le sol américain.' 
+---
+= En savoir plus sur USPS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+United States Protected Support (USPS) est une offre complémentaire pour les abonnements NetApp Keystone .  Il vous donne droit à la livraison et au soutien des services Keystone continus de la part des citoyens américains sur le sol américain.
+
+Lisez les sections suivantes pour comprendre quels éléments de vos abonnements sont liés à ce service complémentaire et sont fournis selon les termes du contrat NetApp Keystone :disclaimer1[Les services et offres décrits ici sont soumis à, limités et régis par un contrat Keystone entièrement exécuté.]
+
+
+
+== Surveillance NetApp USPS
+
+L'équipe d'assistance NetApp USPS Keystone surveille l'état de vos produits et services souscrits, fournit une assistance à distance et collabore avec votre Keystone Success Manager.  Tout le personnel surveillant les produits associés aux commandes d'abonnement Keystone concernées est composé de citoyens américains opérant sur le sol américain.
+
+
+
+== Responsable de la réussite Keystone
+
+Le Keystone Success Manager (KSM) est un citoyen américain opérant sur le sol américain.  Leurs responsabilités sont spécifiées dans votre contrat NetApp Keystone .
+
+
+
+== Activités de déploiement
+
+Lorsque cela est possible, les activités de déploiement et d'installation sur site et à distance sont menées par des citoyens américains sur le sol américain. note de bas de page : avis de non-responsabilité[La disponibilité du personnel approprié pour les activités sur site dépend de l'emplacement géographique où les systèmes Keystone sont déployés.]
+
+
+
+== Support
+
+Lorsque cela est possible, les activités de dépannage et d'assistance sur site nécessaires sont menées par des citoyens américains sur le sol américain. note de bas de page : disclaimer[]

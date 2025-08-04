@@ -1,0 +1,316 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'new features, release notes, enhancements, what"s new' 
+summary: NetApp vous propose des fonctionnalités nouvelles et améliorées dans chaque version des services Keystone STaaS. 
+---
+= Quoi de neuf dans Keystone STaaS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Découvrez les dernières fonctionnalités et améliorations des services Keystone STaaS.
+
+
+
+== 05 août 2025
+
+
+
+=== Afficher les données de consommation au niveau de l'instance
+
+Vous pouvez afficher la consommation actuelle et les données historiques pour chaque instance de niveau de service de performance via le tableau de bord Keystone dans BlueXP.  Cette fonctionnalité est disponible pour les niveaux de service de performances avec plusieurs instances, à condition que vous disposiez d'un abonnement Keystone version 3 (v3).  Pour en savoir plus, consultezlink:https://docs.netapp.com/us-en/keystone-staas/integrations/current-usage-tab.html["Consultez la consommation de vos abonnements Keystone"] .
+
+
+
+== 30 juin 2025
+
+
+
+=== Sortie Keystone version 3 (v3)
+
+Vous pouvez désormais vous abonner à Keystone version 3 (v3), la dernière version de l'offre NetApp Keystone STaaS.  Cette version introduit plusieurs améliorations, notamment des niveaux de service de performances simplifiés, des options de capacité de pointe supplémentaires et des fréquences de facturation flexibles.  Ces améliorations simplifient la gestion, l’optimisation et la mise à l’échelle des solutions de stockage.  Pour en savoir plus, consultezlink:https://docs.netapp.com/us-en/keystone-staas/concepts/metrics.html["Services Keystone STaaS pour la v3"] .
+
+
+
+== 19 juin 2025
+
+
+
+=== Tableau de bord Keystone dans BlueXP
+
+Vous pouvez désormais accéder au tableau de bord Keystone directement depuis BlueXP.  Cette intégration vous offre un emplacement unique pour surveiller, gérer et suivre tous vos abonnements Keystone ainsi que vos autres services NetApp .
+
+Avec le tableau de bord Keystone dans BlueXP, vous pouvez :
+
+* Affichez tous les détails de votre abonnement, l'utilisation de la capacité et les ressources en un seul endroit.
+* Gérez facilement vos abonnements et demandez des modifications à mesure que vos besoins évoluent.
+* Restez au courant des dernières informations concernant votre environnement de stockage.
+
+
+Pour commencer, accédez à *Stockage > Keystone* dans le menu de navigation de gauche de BlueXP .  Pour en savoir plus, consultezlink:https://docs.netapp.com/us-en/keystone-staas/integrations/dashboard-overview.html["Présentation du tableau de bord Keystone"] .
+
+
+
+== 08 janvier 2025
+
+
+
+=== Ajout d'options de visualisation de l'utilisation quotidienne des données accumulées
+
+Vous pouvez désormais afficher l'utilisation quotidienne des données accumulées sous forme de graphique ou de tableau pour une période de facturation mensuelle ou trimestrielle en cliquant sur la barre qui affiche les données facturées.  Pour en savoir plus, consultezlink:./integrations/consumption-tab.html#view-daily-accrued-burst-data-usage["Afficher l'utilisation quotidienne des données accumulées"] .
+
+
+
+== 12 décembre 2024
+
+
+
+=== Colonne logique utilisée renommée
+
+La colonne *Logique utilisée* dans l'onglet *Détails du volume* dans *Volumes et objets* est désormais renommée * Keystone Logique utilisée*.
+
+
+
+=== Onglet Ressources améliorées
+
+L'onglet *Actifs* dans l'écran *Abonnements Keystone * comporte désormais deux nouveaux sous-onglets : * ONTAP* et * StorageGRID*.  Ces sous-onglets offrent des informations détaillées au niveau du cluster pour ONTAP et des informations au niveau de la grille pour StorageGRID en fonction de vos abonnements.  Pour en savoir plus, consultezlink:./integrations/assets-tab.html["Onglet Actifs"^] .
+
+
+
+=== Nouvelle option Masquer/Afficher les colonnes
+
+L'onglet *Détails du volume* dans *Volumes et objets* inclut désormais une option *Masquer/Afficher les colonnes*.  Cette option vous permet de sélectionner ou de désélectionner des colonnes pour personnaliser la liste tabulaire des volumes selon vos préférences.  Pour en savoir plus, consultezlink:./integrations/volumes-objects-tab.html["Onglet Volumes et objets"^] .
+
+
+
+== 21 novembre 2024
+
+
+
+=== Augmentation des excédents de facturation accumulés
+
+Vous pouvez désormais consulter les données d'utilisation cumulées sur une base trimestrielle via l'option *Bourse cumulée facturée* si vous avez opté pour une période de facturation trimestrielle.  Pour en savoir plus, consultezlink:./integrations/consumption-tab.html#view-accrued-burst["Afficher les rafales facturées accumulées"^] .
+
+
+
+=== Nouvelles colonnes dans l'onglet Détails des volumes
+
+Pour améliorer la clarté du calcul de l'utilisation logique, deux nouvelles colonnes ont été ajoutées à l'onglet *Détails du volume* dans l'onglet *Volumes et objets* :
+
+* *AFS logique* : affiche la capacité logique utilisée par le système de fichiers actif du volume.
+* *Instantané physique* : affiche l'espace physique utilisé par les instantanés.
+
+
+Ces colonnes offrent une meilleure clarté sur la colonne *Logique utilisée*, qui affiche la capacité logique combinée utilisée par le système de fichiers actif du volume et l'espace physique utilisé par les instantanés.
+
+
+
+== 11 novembre 2024
+
+
+
+=== Génération de rapports améliorée
+
+Vous pouvez désormais générer un rapport consolidé pour afficher les détails de vos données Keystone à l'aide de la fonction Rapport de Digital Advisor.  Pour en savoir plus, reportez-vous àlink:./integrations/options.html#generate-consolidated-report-from-digital-advisor["Générer un rapport consolidé"^] .
+
+
+
+== 10 juillet 2024
+
+
+
+=== Modifications d'étiquettes
+
+L'étiquette *Utilisation actuelle* est remplacée par *Consommation actuelle* et *Tendance de capacité* est remplacée par *Tendance de consommation*.
+
+
+
+=== Barre de recherche pour les abonnements
+
+La liste déroulante *Abonnements* de tous les onglets de l'écran *Abonnements Keystone * inclut désormais une barre de recherche.  Vous pouvez rechercher des abonnements spécifiques répertoriés dans la liste déroulante *Abonnements*.
+
+
+
+== 27 juin 2024
+
+
+
+=== Affichage cohérent de l'abonnement
+
+L'écran * Abonnements Keystone * est mis à jour pour afficher le numéro d'abonnement sélectionné sur tous les onglets.
+
+* Lorsqu'un onglet de l'écran * Abonnements Keystone * est actualisé, l'écran accède automatiquement à l'onglet * Abonnements* et réinitialise tous les onglets sur le premier abonnement répertorié dans la liste déroulante * Abonnement*.
+* Si l'abonnement sélectionné n'est pas abonné aux mesures de performance, l'onglet *Performance* affichera le premier abonnement répertorié dans la liste déroulante *Abonnement* lors de la navigation.
+
+
+
+
+== 29 mai 2024
+
+
+
+=== Indicateur d'éclatement amélioré
+
+L'indicateur *Burst* dans l'index du graphique d'utilisation est amélioré pour afficher la valeur en pourcentage de la limite de rafale.  Cette valeur change en fonction de la limite de rafale convenue pour un abonnement.  Vous pouvez également afficher la valeur limite de rafale dans l'onglet *Abonnements* en survolant l'indicateur *Utilisation en rafale* dans la colonne *État d'utilisation*.
+
+
+
+=== Ajout de niveaux de service
+
+Les niveaux de service *CVO Primary* et *CVO Secondary* sont inclus pour prendre en charge Cloud Volumes ONTAP pour les abonnements disposant de plans tarifaires avec une capacité engagée nulle ou ceux configurés avec un cluster métropolitain.
+
+* Vous pouvez afficher le graphique d'utilisation de la capacité pour ces niveaux de service à partir de l'ancien tableau de bord du widget * Abonnements Keystone * et de l'onglet * Tendance de la capacité *, ainsi que des informations d'utilisation détaillées à partir de l'onglet * Utilisation actuelle *.
+* Dans l'onglet *Abonnements*, ces niveaux de service sont affichés comme suit `CVO (v2)` dans la colonne *Type d'utilisation*, permettant d'identifier la facturation en fonction de ces niveaux de service.
+
+
+
+
+=== Fonction de zoom avant pour les rafales à court terme
+
+L'onglet *Tendance de capacité* inclut désormais une fonction de zoom avant pour afficher les détails des pics à court terme dans les graphiques d'utilisation. Pour plus d'informations, consultez la section link:./integrations/consumption-tab.html["Onglet Tendance de capacité"^] .
+
+
+
+=== Affichage amélioré des abonnements
+
+L'affichage par défaut des abonnements est amélioré pour trier par ID de suivi.  Les abonnements dans l'onglet *Abonnements*, y compris dans la liste déroulante *Abonnement* et les rapports CSV, seront désormais affichés en fonction de la séquence alphabétique des identifiants de suivi, suivant l'ordre a, A, b, B, etc.
+
+
+
+=== Affichage amélioré des rafales accumulées
+
+L'info-bulle qui apparaît lorsque vous survolez le graphique à barres d'utilisation de la capacité dans l'onglet *Tendance de capacité* affiche désormais le type d'éclatement accumulé en fonction de la capacité engagée.  Il fait la distinction entre les rafales provisionnelles et les rafales facturées, en affichant la *Consommation provisionnelle accumulée* et la *Consommation facturée accumulée* pour les abonnements avec des plans tarifaires à capacité engagée nulle, et la *Rafale provisionnelle accumulée* et la *Rafale facturée accumulée* pour ceux avec une capacité engagée non nulle.
+
+
+
+== 09 mai 2024
+
+
+
+=== Nouvelles colonnes dans les rapports CSV
+
+Les rapports CSV de l'onglet *Tendance de capacité* incluent désormais les colonnes *Numéro d'abonnement* et *Nom du compte* pour des détails améliorés.
+
+
+
+=== Colonne Type d'utilisation amélioré
+
+La colonne *Type d'utilisation* dans l'onglet *Abonnements* a été améliorée pour afficher les utilisations logiques et physiques sous forme de valeurs séparées par des virgules pour les abonnements qui couvrent les niveaux de service pour les fichiers et les objets.
+
+
+
+=== Accéder aux détails du stockage d'objets à partir de l'onglet Détails du volume
+
+L'onglet *Détails du volume* dans l'onglet *Volumes et objets* fournit désormais des détails sur le stockage d'objets ainsi que des informations sur le volume pour les abonnements qui incluent les niveaux de service pour les fichiers et les objets.  Vous pouvez cliquer sur le bouton *Détails du stockage d'objets* dans l'onglet *Détails du volume* pour afficher les détails.
+
+
+
+== 28 mars 2024
+
+
+
+=== Amélioration de l'affichage de la conformité de la politique QoS dans l'onglet Détails du volume
+
+L'onglet *Détails du volume* dans l'onglet *Volumes et objets* offre désormais une meilleure visibilité sur la conformité à la politique de qualité de service (QoS).  La colonne anciennement connue sous le nom de *AQoS* est renommée *Conforme*, ce qui indique si la politique QoS est conforme.  De plus, une nouvelle colonne *Type de politique QoS* est ajoutée, qui spécifie si la politique est fixe ou adaptative.  Si aucune de ces conditions ne s'applique, la colonne affiche _Non disponible_. Pour plus d'informations, consultez la section link:./integrations/volumes-objects-tab.html["Onglet Volumes et objets"^] .
+
+
+
+=== Nouvelle colonne et affichage simplifié des abonnements dans l'onglet Résumé du volume
+
+* L'onglet *Résumé du volume* dans l'onglet *Volumes et objets* inclut désormais une nouvelle colonne intitulée *Protégé*.  Cette colonne fournit un décompte des volumes protégés associés à vos niveaux de service souscrits.  Si vous cliquez sur le nombre de volumes protégés, vous accédez à l'onglet *Détails du volume*, où vous pouvez afficher une liste filtrée des volumes protégés.
+* L'onglet *Résumé du volume* est mis à jour pour afficher uniquement les abonnements de base, à l'exclusion des services complémentaires. Pour plus d'informations, consultez la section link:./integrations/volumes-objects-tab.html["Onglet Volumes et objets"^] .
+
+
+
+
+=== Modification de l'affichage des détails des rafales accumulées dans l'onglet Tendance de capacité
+
+L'info-bulle qui apparaît lorsque vous survolez le graphique à barres d'utilisation de la capacité dans l'onglet *Tendance de capacité* affichera les détails des rafales accumulées pour le mois en cours.  Les détails ne seront pas disponibles pour les mois précédents.
+
+
+
+=== Accès amélioré pour consulter les données historiques des abonnements Keystone
+
+Vous pouvez désormais consulter les données historiques si un abonnement Keystone est modifié ou renouvelé.  Vous pouvez définir la date de début d'un abonnement à une date antérieure pour afficher :
+
+* Données de consommation et d'utilisation en rafale accumulées à partir de l'onglet *Tendance de capacité*.
+* Mesures de performances des volumes ONTAP à partir de l'onglet *Performance*.
+
+
+Les données sont affichées en fonction de la date de début sélectionnée de l'abonnement.
+
+
+
+== 29 février 2024
+
+
+
+=== Ajout de l'onglet Actifs
+
+L'écran * Abonnements Keystone * inclut désormais l'onglet * Actifs *.  Ce nouvel onglet fournit des informations au niveau du cluster en fonction de vos abonnements. Pour plus d'informations, consultez la section link:./integrations/assets-tab.html["Onglet Actifs"^] .
+
+
+
+=== Améliorations de l'onglet Volumes et objets
+
+Pour offrir une meilleure clarté à vos volumes système ONTAP , deux nouveaux boutons d'onglet, *Résumé du volume* et *Détails du volume*, ont été ajoutés à l'onglet *Volumes*.  L'onglet *Résumé du volume* fournit un décompte global des volumes associés à vos niveaux de service souscrits, y compris leur état de conformité AQoS et leurs informations de capacité.  L'onglet *Détails du volume* répertorie tous les volumes et leurs spécificités. Pour plus d'informations, consultez la section link:./integrations/volumes-objects-tab.html["Onglet Volumes et objets"^] .
+
+
+
+=== Expérience de recherche améliorée sur Digital Advisor
+
+Les paramètres de recherche sur l'écran * Digital Advisor* incluent désormais les numéros d'abonnement Keystone et les listes de surveillance créées pour les abonnements Keystone .  Vous pouvez saisir les trois premiers caractères d'un numéro d'abonnement ou d'un nom de liste de surveillance. Pour plus d'informations, consultez la section link:./integrations/keystone-aiq.html["Consultez le tableau de bord Keystone sur Active IQ Digital Advisor"^] .
+
+
+
+=== Afficher l'horodatage des données de consommation
+
+Vous pouvez afficher l'horodatage des données de consommation (en UTC) sur l'ancien tableau de bord du widget * Keystone Subscriptions*.
+
+
+
+== 13 février 2024
+
+
+
+=== Possibilité de visualiser les abonnements liés à un abonnement principal
+
+Certains de vos abonnements principaux peuvent avoir des abonnements secondaires liés.  Si tel est le cas, le numéro d'abonnement principal continuera d'être affiché dans la colonne *Numéro d'abonnement*, tandis que les numéros d'abonnement liés seront répertoriés dans une nouvelle colonne *Abonnements liés* dans l'onglet *Abonnements*.  La colonne *Abonnements liés* devient disponible uniquement si vous avez des abonnements liés et vous pouvez voir des messages d'information vous en informant.
+
+
+
+== 11 janvier 2024
+
+
+
+=== Données facturées renvoyées pour les rafales accumulées
+
+Les étiquettes pour *Accrued Burst* sont désormais modifiées en *Invoiced Accurued Burst* dans l'onglet *Capacity Trend*.  La sélection de cette option vous permet d'afficher les graphiques mensuels des données de rafale facturées et accumulées. Pour plus d'informations, consultez la section link:./integrations/consumption-tab.html#view-accrued-burst["Afficher les rafales facturées accumulées"^] .
+
+
+
+=== Détails de la consommation accumulée pour des plans tarifaires spécifiques
+
+Si vous disposez d'un abonnement avec des plans tarifaires avec une capacité engagée de _zéro_, vous pouvez afficher les détails de la consommation accumulée dans l'onglet *Tendance de capacité*.  En sélectionnant l'option *Consommation facturée accumulée*, vous pouvez afficher les graphiques mensuels des données de consommation facturée accumulée.
+
+
+
+== 15 décembre 2023
+
+
+
+=== Possibilité de rechercher par listes de surveillance
+
+La prise en charge des listes de surveillance dans Digital Advisor a été étendue pour inclure les systèmes Keystone .  Vous pouvez désormais consulter les détails des abonnements de plusieurs clients en effectuant une recherche avec des listes de surveillance.  Pour plus d'informations sur l'utilisation des listes de surveillance dans Keystone STaaS, consultezlink:./integrations/keystone-aiq.html#search-by-keystone-watchlists["Rechercher par listes de surveillance Keystone"^] .
+
+
+
+=== Date convertie au fuseau horaire UTC
+
+Les données renvoyées sur les onglets de l'écran * Abonnements Keystone * de Digital Advisor sont affichées en heure UTC (fuseau horaire du serveur).  Lorsque vous saisissez une date pour une requête, elle est automatiquement considérée comme étant en heure UTC. Pour plus d'informations, consultez la section link:./integrations/keystone-aiq.html["Tableau de bord et rapports d'abonnement Keystone"^] .

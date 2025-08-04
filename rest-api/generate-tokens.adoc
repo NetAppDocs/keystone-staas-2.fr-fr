@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: rest-api/generate-tokens.html 
+keywords: Refresh token, Digital Advisor portal,access 
+summary: 'Générez un jeton d’actualisation pour acquérir de nouveaux jetons d’accès.  Il authentifie les requêtes API et reste valable pendant une semaine ou jusqu"à son remplacement.  Vous pouvez obtenir le jeton d’accès via la console ou un appel API.' 
+---
+= Générer des jetons d'actualisation et d'accès
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un jeton d'actualisation est utilisé pour obtenir par programmation un nouvel ensemble de jetons d'accès et est valable une semaine ou jusqu'à ce qu'il ait été utilisé pour obtenir un nouvel ensemble de jetons.
+
+Les étapes pour générer un jeton d'actualisation à l'aide du portail Digital Advisor sont les suivantes :
+
+. Connectez-vous au https://aiq.netapp.com/api["Portail du Digital Advisor"] en utilisant les informations d'identification NetApp et sélectionnez *Générer des jetons*.
++
+image:rest-api-aiq-portal.png["Étapes pour générer un jeton d'actualisation à l'aide du portail Digital Advisor"]
+
++
+
+NOTE: Pour les nouveaux utilisateurs, si l'option *Générer des jetons* n'est pas disponible, sélectionnez *S'inscrire* pour soumettre une demande d'autorisation.  Remplissez le formulaire d'inscription pour activer la fonctionnalité.
+
+. Le système génère un jeton d’accès et un jeton d’actualisation.  Enregistrez le jeton d’actualisation sur une plateforme de confiance.
++
+
+NOTE: Le portail vous offre plusieurs façons de sauvegarder un ou les deux jetons de l'ensemble.  Vous pouvez les copier dans le presse-papiers, les télécharger sous forme de fichier texte ou les afficher sous forme de texte brut.
+
++
+image:rest-api-token-types.png["Types de jetons"]
+
+
+
+
+
+== Générer un jeton d'accès à l'aide de l'API REST Digital Advisor
+
+Le jeton d'accès est utilisé pour authentifier les demandes d'API Digital Advisor .  Il peut être généré directement via la console avec le jeton d'actualisation ou en utilisant l'appel API suivant :
+
+*Demande:*
+
+[cols="41%,59%"]
+|===
+
+
+| *Méthode* | POSTE 
+
+
+| *Point final* | `https://api.activeiq.netapp.com/v1/tokens/accessToken` 
+
+
+| *En-têtes*  a| 
+* accepter : application/json
+* Type de contenu : application/json
+
+
+
+
+| *Corps de la demande*  a| 
+{ "refresh_token": "<refresh-token>" }
+
+|===
+
+NOTE: Vous devez disposer de privilèges administratifs pour que Digital Advisor puisse accéder à ce point de terminaison.
+
+*Réponse:*
+
+L'API renvoie un jeton d'accès et un jeton d'actualisation au format JSON en guise de réponse.
+
+[listing]
+----
+{
+"refresh_token": "string",
+"access_token": "string"
+}
+----
+*Code d'état* : 200 – Demande réussie
+
+*Exemple de boucle*:
+
+[source, curl]
+----
+curl -X 'POST' \ 'https://api.activeiq.netapp.com/v1/tokens/accessToken' \ -H 'accept: application/json' \ -H 'Content-Type: application/json' \ -d ' { "refresh_token": "<refresh-token>" }'
+----
+
+
+== Exécuter l'appel API
+
+Une fois un jeton d'accès généré avec succès, les appels API Digital Advisor autorisés peuvent être exécutés pour les informations requises.

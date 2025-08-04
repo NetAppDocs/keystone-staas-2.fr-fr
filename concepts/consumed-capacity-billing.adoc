@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: concepts/consumed-capacity-billing.html 
+keywords: consumed capacity billing, billing and consumed capacity 
+summary: 'La capacité consommée est la capacité que vos charges de travail utilisent réellement pendant l"utilisation de votre service.' 
+---
+= Comptage basé sur la capacité consommée
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Keystone STaaS dispose d'un système de mesure basé sur la capacité que vous consommez pendant votre utilisation du service.  La capacité consommée est la capacité que vos charges de travail utilisent réellement.
+
+Dans le cadre du déploiement du service Keystone , NetApp surveille et mesure en permanence la consommation du service.  Au moins une fois toutes les cinq minutes, un enregistrement de consommation est généré par le système, détaillant la capacité consommée actuelle pour votre abonnement.  Ces enregistrements sont agrégés sur la période de facturation pour générer des factures et des rapports d'utilisation.
+
+Pour plus d'informations sur les différentes capacités prises en charge dans Keystone, consultezlink:../concepts/supported-storage-capacity.html["Capacités de stockage prises en charge dans Keystone"] .

@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: integrations/keystone-aiq.html 
+keywords: Keystone, Digital Advisor, keystone-aiq, aiq, dashboard overview, manage subscriptions, monitor 
+summary: 'En tant qu"abonné NetApp Keystone STaaS, vous pouvez obtenir un aperçu de vos abonnements à partir du tableau de bord Digital Advisor .' 
+---
+= Tableau de bord Keystone dans Digital Advisor
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+En tant qu'abonné NetApp Keystone STaaS, vous pouvez obtenir un aperçu de vos abonnements sur le widget * Abonnements Keystone * du tableau de bord Digital Advisor .
+
+Vous pouvez rechercher un abonnement Keystone spécifique en saisissant les trois premiers caractères d'un nom de client ou de liste de surveillance, ou le numéro d'abonnement Keystone .  Pour plus d'informations sur la façon de rechercher des abonnements Keystone STaaS par listes de surveillance, consultezlink:../integrations/keystone-aiq.html#search-by-keystone-watchlists["Rechercher en utilisant les listes de surveillance Keystone"] .
+
+Digital Advisor propose un tableau de bord unifié qui donne un aperçu des différents niveaux de vos données d'abonnement et des informations d'utilisation via le bouton *Passer à l'ancien/nouveau tableau de bord*.
+
+.Tableau de bord par défaut (ancien)
+Vous pouvez voir votre nom de client et votre numéro d'abonnement, le nom de votre compte, les dates de début et de fin de l'abonnement, ainsi que les graphiques d'utilisation de la capacité en fonction de vos niveaux de service de performance souscrits.  Vous pouvez voir l'horodatage de collecte des données de consommation en heure UTC.
+
+image:old-db-3.png["ancien tableau de bord"]
+
+.Tableau de bord alternatif (nouveau)
+Vous pouvez voir la répartition de l'utilisation de la capacité en fonction de vos abonnements, ainsi que les avertissements et alertes qui nécessitent une attention ou une action immédiate.  Les informations apparaissent de manière sélective, en fonction de vos abonnements et de l'état de votre utilisation.  Vous pouvez consulter ces informations :
+
+* *Utilisation de la capacité* : données de consommation telles que l'absence d'utilisation, la consommation dépassant 80 % de la capacité engagée, l'utilisation en rafale et la consommation supérieure à la capacité en rafale.
+* *Alertes* : Vous voyez des alertes pour différents scénarios s'ils s'appliquent à vous.
++
+** *Expire bientôt* : Au cas où vos abonnements expirent dans les 90 jours.
+** *Avertissements QoS* : Vous avez des volumes sans politiques AQoS attribuées.
++
+
+TIP: Cliquez sur le lien *Abonnements* pour afficher la liste des abonnements filtrés dans l'onglet *Abonnements*.
+
+
+
+
+
+image:new-db-4.png["nouveau tableau de bord"]
+
+Vous pouvez cliquer sur *Afficher tous les abonnements* pour afficher les détails d'utilisation et les alertes sur vos volumes sur la page *Abonnements Keystone *.
+
+Les détails des abonnements, les graphiques d'utilisation pour chaque niveau de service de performance et les détails du volume sont affichés dans les différents onglets de l'écran * Abonnements Keystone *.
+
+
+NOTE: La consommation de capacité dans les abonnements Keystone est affichée en Tio sur les tableaux de bord et les rapports, et est arrondie à deux décimales.  Si l'utilisation est inférieure à 0,01 Tio, la valeur est affichée comme 0 ou Aucune utilisation.  Les données sur ces écrans sont affichées en heure UTC (fuseau horaire du serveur).  Lorsque vous saisissez une date pour une requête, elle est automatiquement considérée comme étant en heure UTC.  Pour en savoir plus sur les mesures d'utilisation, reportez-vous àlink:../concepts/metrics.html#metrics-measurement["Mesure des métriques"] .  Pour plus d'informations sur les différentes capacités utilisées dans Keystone, voirlink:../concepts/supported-storage-capacity.html["Capacités de stockage prises en charge"] .
+
+
+
+== Rechercher par listes de surveillance Keystone
+
+La liste de surveillance est une fonctionnalité disponible dans Digital Advisor.  Pour plus d'informations, voir https://docs.netapp.com/us-en/active-iq/concept_overview_dashboard.html["Comprendre la liste de surveillance"^] .  Pour plus d'informations sur la création de listes de surveillance, consultez https://docs.netapp.com/us-en/active-iq/task_add_watchlist.html["Créer une liste de surveillance"^] .
+
+Vous pouvez créer des listes de surveillance pour les clients ou les numéros d'abonnement et rechercher un abonnement Keystone à l'aide des trois premiers caractères d'un numéro d'abonnement ou d'un nom de liste de surveillance sur l'écran Digital Advisor .  Lorsque vous effectuez une recherche par nom de liste de surveillance, vous pouvez afficher les clients et leurs abonnements dans la liste déroulante *Abonnement* du widget *Abonnements Keystone *.
+
+
+NOTE: Une recherche par listes de surveillance récupère la liste des abonnements sur l'ancien tableau de bord.  Si une liste de surveillance se compose de numéros d'abonnement, seul le widget * Abonnements Keystone * s'affiche sur le tableau de bord de Digital Advisor .
+
+image:watchlist.png["écran de liste de surveillance"]
+
+*Informations connexes*
+
+* link:../integrations/dashboard-access.html["Démarrer avec le tableau de bord Keystone"]
+* link:../integrations/keystone-bluexp.html["Tableau de bord Keystone dans BlueXP"]
+* link:../integrations/subscriptions-tab.html["Consultez les détails de votre abonnement"]
+* link:../integrations/current-usage-tab.html["Consultez les détails de votre consommation actuelle"]
+* link:../integrations/consumption-tab.html["Voir les tendances de consommation"]
+

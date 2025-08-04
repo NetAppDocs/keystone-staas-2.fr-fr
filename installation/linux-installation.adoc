@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: installation/linux-installation.html 
+keywords: Linux installation Keystone, Linux Collector installation 
+summary: Installez le logiciel Keystone Collector à partir du référentiel de logiciels YUM. 
+---
+= Installer Keystone Collector sur les systèmes Linux
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vous pouvez installer le logiciel Keystone Collector sur un serveur Linux à l'aide d'un package RPM ou Debian.  Suivez les étapes d'installation en fonction de votre distribution Linux.
+
+[role="tabbed-block"]
+====
+.Utilisation de RPM
+--
+. Connectez-vous en SSH au serveur Keystone Collector et élevez-vous à `root` privilège.
+. Importer la signature publique Keystone :
+`# rpm --import https://keystone.netapp.com/repo/RPM-GPG-NetApp-Keystone-20221101`
+. Assurez-vous que le certificat public correct a été importé en vérifiant l'empreinte digitale de Keystone Billing Platform dans la base de données RPM :
+`# rpm -qa gpg-pubkey --qf '%{Description}'|gpg --show-keys --fingerprint` L'empreinte digitale correcte ressemble à ceci :
+`90B3 83AF E07B 658A 6058 5B4E 76C2 45E4 33B6 C17D`
+. Téléchargez le `keystonerepo.rpm` déposer:
+`curl -O https://keystone.netapp.com/repo/keystonerepo.rpm`
+. Vérifier l'authenticité du fichier :
+`rpm --checksig -v keystonerepo.rpm` Une signature pour un fichier authentique ressemble à ceci :
+`Header V4 RSA/SHA512 Signature, key ID 33b6c17d: OK`
+. Installez le fichier du référentiel logiciel YUM :
+`# yum install keystonerepo.rpm`
+. Une fois le dépôt Keystone installé, installez le package keystone-collector via le gestionnaire de packages YUM :
++
+`# yum install keystone-collector`
+
++
+Pour Red Hat Enterprise Linux 9, exécutez la commande suivante pour installer le package keystone-collector :
+`# yum install keystone-collector-rhel9`
+
+
+
+--
+.Utiliser Debian
+--
+. Connectez-vous en SSH au serveur Keystone Collector et élevez-vous à `root` privilège.
+`sudo su`
+. Téléchargez le `keystone-sw-repo.deb` déposer:
+`curl -O https://keystone.netapp.com/downloads/keystone-sw-repo.deb`
+. Installez le fichier de référentiel de logiciels Keystone :
+`# dpkg -i keystone-sw-repo.deb`
+. Mettre à jour la liste des packages :
+`# apt-get update`
+. Une fois le dépôt Keystone installé, installez le package keystone-collector :
+`# apt-get install keystone-collector`
+
+
+--
+====
+
+NOTE: Une fois l'installation terminée, vous pouvez utiliser l'utilitaire Keystone Collector Management Terminal User Interface (TUI) pour effectuer les activités de configuration et de surveillance.  Vous pouvez utiliser différentes commandes du clavier, telles que les touches Entrée et fléchées, pour sélectionner les options et naviguer dans cette interface utilisateur graphique.  Voirlink:../installation/configuration.html["Configurer Keystone Collector"] etlink:../installation/monitor-health.html["Surveiller la santé du système"] pour information.

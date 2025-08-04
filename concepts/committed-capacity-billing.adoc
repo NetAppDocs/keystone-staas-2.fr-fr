@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: concepts/committed-capacity-billing.html 
+keywords: Billing based on committed capacity, committed capacity billing 
+summary: 'La capacité engagée est la capacité engagée pour un niveau de service particulier lors de l"achat de l"abonnement.' 
+---
+= Facturation basée sur la capacité engagée
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+La capacité engagée est la capacité engagée pour un niveau de service de performance particulier lors de l'achat de l'abonnement.
+
+La capacité engagée peut être la capacité totale pour différents niveaux de service de performances dans un seul abonnement, telle qu'acceptée par vous et NetApp/partenaire.  Cette capacité est indiquée sur chaque commande Keystone et est facturée, quelle que soit la consommation réelle de capacité.
+
+Pour plus d'informations sur les différentes capacités prises en charge dans Keystone, consultezlink:../concepts/supported-storage-capacity.html["Capacités de stockage prises en charge dans Keystone"] .

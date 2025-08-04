@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: installation/security.html 
+keywords: VMware, security, hardening, Keystone Collector 
+summary: 'Keystone Collector inclut des fonctionnalités de sécurité qui surveillent les performances et les mesures d"utilisation des systèmes Keystone , et il est configuré pour utiliser des configurations renforcées en termes de sécurité.' 
+---
+= Sécurité du collecteur Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Keystone Collector inclut des fonctionnalités de sécurité qui surveillent les performances et les mesures d'utilisation des systèmes Keystone , sans risquer la sécurité des données client.
+
+Le fonctionnement de Keystone Collector repose sur les principes de sécurité suivants :
+
+* *Confidentialité dès la conception* - Keystone Collector collecte un minimum de données pour effectuer la mesure de l'utilisation et la surveillance des performances. Pour plus d'informations, consultez la section link:data-collection.html["Données collectées pour la facturation"^] .  Lelink:configuration.html#limit-collection-of-private-data["Supprimer les données privées"] L'option est activée par défaut, ce qui masque et protège les informations sensibles.
+* *Accès avec le moindre privilège* - Keystone Collector nécessite des autorisations minimales pour surveiller les systèmes de stockage, ce qui minimise les risques de sécurité et empêche toute modification involontaire des données.  Cette approche s’aligne sur le principe du moindre privilège, améliorant ainsi la posture de sécurité globale des environnements surveillés.
+* *Cadre de développement logiciel sécurisé* - Keystone utilise un cadre de développement logiciel sécurisé tout au long du cycle de développement, ce qui atténue les risques, réduit les vulnérabilités et protège le système contre les menaces potentielles.
+
+
+
+
+== Renforcement de la sécurité
+
+Par défaut, Keystone Collector est configuré pour utiliser des configurations renforcées en termes de sécurité.  Voici les configurations de sécurité recommandées :
+
+* Le système d'exploitation de la machine virtuelle Keystone Collector :
++
+** Conforme à la norme CIS Debian Linux 12 Benchmark.  Toute modification de la configuration du système d'exploitation en dehors du logiciel de gestion Keystone Collector peut réduire la sécurité du système. Pour plus d'informations, consultez la section link:https://learn.cisecurity.org/benchmarks["Guide de référence du CIS"^] .
+** Reçoit et installe automatiquement les correctifs de sécurité vérifiés par Keystone Collector via la fonction de mise à jour automatique.  La désactivation de cette fonctionnalité peut entraîner l’apparition de logiciels vulnérables non corrigés.
+** Authentifie les mises à jour reçues de Keystone Collector.  La désactivation de la vérification du référentiel APT peut entraîner l’installation automatique de correctifs non autorisés, introduisant potentiellement des vulnérabilités.
+
+
+* Keystone Collector valide automatiquement les certificats HTTPS pour garantir la sécurité de la connexion.  La désactivation de cette fonctionnalité peut entraîner une usurpation d’identité de points de terminaison externes et une fuite de données d’utilisation.
+* Keystone Collector prend en chargelink:configuration.html#trust-a-custom-root-ca["Autorité de certification de confiance personnalisée"] certification.  Par défaut, il fait confiance aux certificats signés par des autorités de certification racines publiques reconnues par lelink:https://wiki.mozilla.org/CA["Programme de certificat Mozilla CA"^] .  En activant des autorités de certification de confiance supplémentaires, Keystone Collector permet la validation des certificats HTTPS pour les connexions aux points de terminaison qui présentent ces certificats.
+* Le collecteur Keystone active par défaut l'option *Supprimer les données privées*, qui masque et protège les informations sensibles. Pour plus d'informations, consultez la section link:configuration.html#limit-collection-of-private-data["Limiter la collecte de données privées"^] .  La désactivation de cette option entraîne la communication de données supplémentaires au système Keystone .  Par exemple, il peut inclure des informations saisies par l’utilisateur, telles que les noms de volumes, qui peuvent être considérés comme des informations sensibles.
+
+
+*Informations connexes*
+
+* link:installation-overview.html["Présentation de Keystone Collector"]
+* link:vapp-prereqs.html["Exigences en matière d'infrastructure virtuelle"]
+* link:configuration.html["Configurer Keystone Collector"]
+

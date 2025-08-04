@@ -1,0 +1,365 @@
+---
+sidebar: sidebar 
+permalink: installation/data-collection.html 
+keywords: type of data collected by Keystone collector 
+summary: 'Keystone collecte des informations de configuration, d"état et d"utilisation pour les abonnements ONTAP et StorageGRID .  Il peut également collecter des données de performances ONTAP .' 
+---
+= Types de données utilisateur collectées par Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Keystone collecte les informations de configuration, d'état et d'utilisation des abonnements Keystone ONTAP et Keystone StorageGRID , ainsi que les données de télémétrie de la machine virtuelle (VM) hébergeant Keystone Collector.  Il peut collecter des données de performances pour ONTAP uniquement, si cette option est activée dans Keystone Collector.
+
+
+
+== Collecte de données ONTAP
+
+.Données d'utilisation collectées pour ONTAP: En savoir plus
+[%collapsible]
+====
+La liste suivante est un échantillon représentatif des données de consommation de capacité collectées pour ONTAP:
+
+* Groupes
++
+** ClusterUUID
+** Nom du cluster
+** Numéro de série
+** Emplacement (basé sur la valeur saisie dans le cluster ONTAP )
+** Contact
+** Version
+
+
+* Nœuds
++
+** Numéro de série
+** Nom du nœud
+
+
+* Volumes
++
+** Nom agrégé
+** Nom du volume
+** VolumeInstanceUUID
+** Drapeau IsCloneVolume
+** Drapeau IsFlexGroupConstituent
+** Drapeau IsSpaceEnforcementLogical
+** Indicateur IsSpaceReportingLogical
+** Espace logique utilisé par les Afs
+** Pourcentage d'espace instantané
+** Niveau de performance Données utilisateur inactives
+** Niveau de performance Pourcentage de données utilisateur inactives
+** Nom du groupe de politiques adaptatives QoS
+** Nom du groupe de politiques QoSPolicy
+** Taille
+** Utilisé
+** PhysiqueUtilisé
+** Taille utilisée par les instantanés
+** Type
+** VolumeStyleÉtendu
+** Nom du serveur virtuel
+** Drapeau IsVsRoot
+
+
+* Serveurs virtuels
++
+** Nom du serveur virtuel
+** UUID du serveur virtuel
+** Sous-type
+
+
+* Agrégats de stockage
++
+** Type de stockage
+** Nom agrégé
+** UUID agrégé
+
+
+* Magasins d'objets agrégés
++
+** Nom du magasin d'objets
+** ObjectStoreUUID
+** Type de fournisseur
+** Nom agrégé
+
+
+* Volumes de clones
++
+** FlexClone
+** Taille
+** Utilisé
+** serveur virtuel
+** Type
+** ParentVolume
+** ParentVserver
+** Est-constituant
+** Estimation fractionnée
+** État
+** FlexCloneUsedPercent
+
+
+* LUN de stockage
++
+** UUID LUN
+** Nom de LUN
+** Taille
+** Utilisé
+** Drapeau IsReserved
+** Drapeau IsRequested
+** Nom de l'unité logique
+** QoSPolicyUUID
+** Nom de la politique de qualité
+** VolumeUUID
+** Nom du volume
+** SVMUUID
+** Nom de SVM
+
+
+* Volumes de stockage
++
+** VolumeInstanceUUID
+** Nom du volume
+** Nom SVM
+** SVMUUID
+** QoSPolicyUUID
+** Nom de la politique de qualité
+** Empreinte de niveau de capacité
+** Empreinte de niveau de performance
+** Empreinte totale
+** Politique de hiérarchisation
+** Drapeau IsProtected
+** Drapeau IsDestination
+** Utilisé
+** PhysiqueUtilisé
+** CloneParentUUID
+** Espace logique utilisé par les Afs
+
+
+* Groupes de politiques QoS
++
+** Groupe de politiques
+** QoSPolicyUUID
+** Débit maximal
+** Débit minimal
+** Débit maximal IOPS
+** Débit maximal en Mbit/s
+** Débit minimal IOPS
+** Débit minimal (MBps)
+** Drapeau IsShared
+
+
+* Groupes de politiques QoS adaptatives ONTAP
++
+** Nom de la politique de qualité
+** QoSPolicyUUID
+** Pic IOPS
+** Allocation de pics d'IOPS
+** MinIOPS absolus
+** IOPS attendus
+** Allocation d'IOPS attendue
+** Taille du bloc
+
+
+* Empreintes de pas
++
+** serveur virtuel
+** Volume
+** Empreinte totale
+** VolumeBlocksFootprintBin0
+** VolumeBlocksFootprintBin1
+
+
+* clusters MetroCluster
++
+** ClusterUUID
+** Nom du cluster
+** RemoteClusterUUID
+** Nom du cluster distant
+** État de configuration locale
+** État de configuration à distance
+** Mode
+
+
+* Mesures d'observabilité du collecteur
++
+** Heure de collecte
+** Point de terminaison de l'API Active IQ Unified Manager interrogé
+** Temps de réponse
+** Nombre d'enregistrements
+** IP d'instance AIQUM
+** ID d'instance de collecteur
+
+
+
+
+====
+.Données de performance collectées pour ONTAP: En savoir plus
+[%collapsible]
+====
+La liste suivante est un échantillon représentatif des données de performance collectées pour ONTAP:
+
+* Nom de cluster
+* UUID de cluster
+* ID d'objet
+* Nom du volume
+* UUID de l'instance de volume
+* serveur virtuel
+* UUID du serveur virtuel
+* Nœud série
+* Version ONTAP
+* Version AIQUM
+* Agrégat
+* UUID agrégé
+* Clé de ressource
+* Horodatage
+* IOPSPerTb
+* Latence
+* Latence de lecture
+* Écriture en Mbit/s
+* QoSMminThroughputLatency
+* QoSNBladeLatency
+* Espace libre utilisé
+* CacheMissRatio
+* Autre latence
+* QoSAAggregateLatency
+* Op E/S par sec
+* QoSNetworkLetency
+* Opérations disponibles
+* Latence d'écriture
+* QoSCloudLatency
+* QoSClusterInterconnectLatency
+* AutresMBps
+* QoSCopLatency
+* QoSDBladeLatency
+* Utilisation
+* Lire les IOPS
+* Mbit/s
+* Autres IOPS
+* QoSPolicyGroupLatency
+* Lecture en Mbit/s
+* QoSSyncSnapmirrorLatence
+* ÉcrireIOPS
+
+
+====
+.<strong>Liste des éléments supprimés concernant la limitation de l'accès aux données privées : En savoir plus</strong>
+[%collapsible]
+====
+Lorsque l'option *Supprimer les données privées* est activée sur Keystone Collector, les informations d'utilisation suivantes sont éliminées pour ONTAP.  Cette option est activée par défaut.
+
+* Nom de cluster
+* Localisation du cluster
+* Contact du cluster
+* Nom du nœud
+* Nom agrégé
+* Nom du volume
+* Nom du groupe de politiques adaptatives QoS
+* Nom du groupe de politiques QoSPolicy
+* Nom du serveur virtuel
+* Nom du LUN de stockage
+* Nom agrégé
+* Nom de l'unité logique
+* Nom de SVM
+* IP d'instance AIQUM
+* FlexClone
+* Nom du cluster distant
+
+
+====
+
+
+== Collecte de données StorageGRID
+
+.Données d'utilisation collectées pour StorageGRID: En savoir plus
+[%collapsible]
+====
+La liste suivante est un échantillon représentatif des `Logical Data` collecté pour StorageGRID:
+
+* ID StorageGRID
+* ID de compte
+* Nom du compte
+* Octets de quota de compte
+* Nom du bucket
+* Nombre d'objets du bucket
+* Octets de données du bucket
+
+
+La liste suivante est un échantillon représentatif des `Physical Data` collecté pour StorageGRID:
+
+* ID StorageGRID
+* Nœud ID
+* ID du site
+* Nom du site
+* Exemple
+* Utilisation du stockage StorageGRID Octets
+* Métadonnées d'utilisation du stockage StorageGRID Octets
+
+
+====
+.<strong>Liste des éléments supprimés concernant la limitation de l'accès aux données privées : En savoir plus</strong>
+[%collapsible]
+====
+Lorsque l'option *Supprimer les données privées* est activée sur Keystone Collector, les informations d'utilisation suivantes sont éliminées pour StorageGRID.  Cette option est activée par défaut.
+
+* Nom du compte
+* Nom du compartiment
+* Nom du site
+* Nom d'instance/de nœud
+
+
+====
+
+
+== Collecte de données de télémétrie
+
+.Données de télémétrie collectées à partir de Keystone Collector VM : En savoir plus
+[%collapsible]
+====
+La liste suivante est un échantillon représentatif des données de télémétrie collectées pour les systèmes Keystone :
+
+* Informations système
++
+** Nom du système d'exploitation
+** Version du système d'exploitation
+** ID du système d'exploitation
+** Nom d'hôte du système
+** Adresse IP par défaut du système
+
+
+* Utilisation des ressources système
++
+** Temps de disponibilité du système
+** Nombre de cœurs du processeur
+** Charge du système (1 min, 5 min, 15 min)
+** Mémoire totale
+** Mémoire libre
+** Mémoire disponible
+** Mémoire partagée
+** Mémoire tampon
+** Mémoire cache
+** Échange total
+** Échange gratuit
+** Échange mis en cache
+** Nom du système de fichiers du disque
+** Taille du disque
+** Disque utilisé
+** Disque disponible
+** Pourcentage d'utilisation du disque
+** Point de montage du disque
+
+
+* Paquets installés
+* Configuration du collecteur
+* Journaux de service
++
+** Journaux de service des services Keystone
+
+
+
+
+====
