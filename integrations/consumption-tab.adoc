@@ -187,6 +187,8 @@ Pour le niveau de service de performance _Advanced Data-Protect_, le graphique a
 
 image:adp-src-2.png["base primaire du MCC"]
 
+La consommation affichée de 94,21 Tio représente l'utilisation de l'abonnement principal.  Étant donné que la protection avancée des données répartit la consommation entre les sites partenaires avec des abonnements distincts, ce graphique affiche uniquement l'utilisation du site principal.  Pour en savoir plus sur les tarifs du service complémentaire de protection avancée des données, consultezlink:../concepts/adp.html#understand-pricing["Comprendre la tarification"] .
+
 .Ce que vous pouvez voir pour l'abonnement secondaire (site miroir)
 Lorsque vous vérifiez l'abonnement secondaire, vous pouvez voir que le graphique à barres du niveau de service de performance _Performance_ (niveau de service de performance de base) au même point de collecte de données que le site partenaire est inversé et que la répartition de la consommation sur les sites principal et miroir est respectivement de 93,38 Tio et 95,04 Tio.
 

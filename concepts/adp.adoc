@@ -25,7 +25,13 @@ Le service avancé de protection des données Keystone peut refléter de manièr
 
 Pour plus d'informations sur la façon d'afficher la consommation dans une configuration MetroCluster , consultezlink:../integrations/consumption-tab.html#reference-charts-for-advanced-data-protection-for-metrocluster["Tableaux de référence pour la protection avancée des données"] .
 
-Les frais supplémentaires s'appliquent à toutes les capacités de votre abonnement, y compris les données sources, les copies en miroir et les données non en miroir.
+
+
+== Comprendre la tarification
+
+Le service complémentaire de protection avancée des données est tarifé en fonction de la capacité engagée sur chaque site.  Cela permet de déterminer le coût réel du service avancé de protection des données en $/Tio. Les frais supplémentaires s'appliquent à toutes les capacités de votre abonnement, y compris les données sources, les copies en miroir et les données non en miroir.
+
+Pour la configuration de MetroCluster , chaque site nécessite son propre abonnement et vous êtes facturé pour la capacité engagée sur chaque site indépendamment.  Pour en savoir plus sur la facturation, consultezlink:../concepts/misc-volume-billing.html#billing-for-advanced-data-protection["Facturation pour la protection avancée des données"] .
 
 Notez ce qui suit :
 

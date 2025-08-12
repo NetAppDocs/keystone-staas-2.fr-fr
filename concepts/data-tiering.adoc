@@ -18,22 +18,23 @@ Les services standard Keystone STaaS pour le stockage de fichiers et de blocs in
 
 Pour plus d'informations sur les services standard et complémentaires, consultezlink:../concepts/supported-storage-services.html["Services STaaS Keystone"] .  Pour plus d'informations sur les niveaux de service de performance, voirlink:../concepts/service-levels.html["Niveaux de service de performance dans Keystone"] .
 
-Le service complémentaire de hiérarchisation est requis uniquement lorsque les données sont hiérarchisées vers un stockage non NetApp tel qu'Amazon Web Services (AWS) S3, Azure Blob, Google Cloud Platform (GCP) et d'autres stockages d'objets tiers compatibles S3 et pris en charge par Keystone STaaS.
+
+NOTE: Le service complémentaire de hiérarchisation est requis uniquement lorsque les données sont hiérarchisées vers un stockage non NetApp tel qu'Amazon Web Services (AWS) S3, Azure Blob, Google Cloud Platform (GCP) et d'autres stockages d'objets tiers compatibles S3 et pris en charge par Keystone STaaS.
 
 La capacité de hiérarchisation exploite la technologie NetApp FabricPool qui permet la hiérarchisation automatisée des données rarement consultées vers des niveaux de stockage d'objets sur site et hors site.
 
-Le service complémentaire de hiérarchisation des données permet la hiérarchisation des niveaux Extreme, Premium, Performance, Standard et Value vers une cible de stockage d'objets.  Le rapport entre les données chaudes et froides à hiérarchiser n'est pas fixe, et chaque niveau est mesuré et facturé séparément.
+Le service complémentaire de hiérarchisation des données permet la hiérarchisation des niveaux Extreme, Premium, Performance, Standard et Value vers une cible de stockage d'objets. Le ratio de données chaudes et froides à hiérarchiser n'est pas fixe, et chaque niveau est mesuré et facturé séparément.
 
 Par exemple, si la cible pour le niveau de stockage à froid est :
 
-* Niveau de valeur Keystone STaaS, niveau d'objet Keystone STaaS StorageGRID ou grille SGWS existante (appartenant au client) - Il n'y a pas de frais supplémentaires ; cela fait partie du service standard.
+* Niveau de valeur Keystone STaaS, niveau d'objet Keystone STaaS StorageGRID ou grille StorageGRID Webscale (SGWS) existante (appartenant au client) - Il n'y a pas de frais supplémentaires ; cela fait partie du service standard.
 * Stockage d'objets tiers pris en charge par le cloud public (AWS, Azure, Google) ou Keystone STaaS - Des frais supplémentaires sont appliqués pour la capacité de données hiérarchisée en fonction de la cible de stockage à froid.
 
 
 Les frais pour les services de hiérarchisation complémentaires s'appliquent pendant toute la durée de l'abonnement.
 
 
-NOTE: Les services de calcul, de stockage et de réseau hyperscalaires requis par Cloud Volumes ONTAP ne sont pas fournis par NetApp dans le cadre des abonnements Keystone STaaS ; ces services doivent être achetés directement auprès des fournisseurs de services cloud hyperscalaires.
+NOTE: Les services de calcul, de stockage et de réseau basés sur un hyperscaler requis par Cloud Volumes ONTAP ne sont pas fournis par NetApp dans le cadre des abonnements Keystone STaaS ; ces services doivent être achetés directement auprès des fournisseurs de services cloud hyperscaler.
 
 *Informations connexes*
 
