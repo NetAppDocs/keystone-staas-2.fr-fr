@@ -54,7 +54,7 @@ Vous pouvez voir la liste tabulaire des volumes, tels que l'utilisation de la ca
 NOTE: Les politiques QoS ne sont pas applicables dans la version 3 de Keystone .
 
 +
-Vous pouvez utiliser *Masquer/Afficher les colonnes* pour ajouter ou supprimer des colonnes affichées dans le tableau.  Par défaut, toutes les colonnes sont sélectionnées sauf la colonne *Département*.  Vous pouvez sélectionner ou désélectionner n'importe quelle colonne, y compris la colonne *Département*, et vos préférences seront enregistrées pour une utilisation ultérieure.  Lors du téléchargement du rapport CSV, les détails de la colonne *Département* seront inclus s'ils sont sélectionnés, tandis que les autres colonnes apparaîtront quel que soit leur statut de sélection dans le tableau.
+Vous pouvez utiliser *Masquer/Afficher les colonnes* pour ajouter ou supprimer des colonnes affichées dans le tableau. Par défaut, le tableau affiche vos préférences de colonnes précédemment enregistrées.  Les colonnes nouvellement ajoutées, telles que les colonnes *Département* ou *Empreinte totale*, sont masquées par défaut et doivent être sélectionnées manuellement pour apparaître dans le tableau.  Vous pouvez sélectionner ou désélectionner n'importe quelle colonne et vos préférences seront enregistrées pour une utilisation ultérieure.  Lors du téléchargement du rapport CSV, toutes les colonnes disponibles sont incluses dans l'exportation, quelles que soient vos préférences d'affichage.
 
 +
 
