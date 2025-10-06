@@ -16,7 +16,7 @@ summary: 'Affichez les détails de capacité au niveau du volume ou du stockage 
 [role="lead"]
 Si vous souhaitez afficher les détails de capacité au niveau du volume ou du stockage d'objets, vous pouvez accéder à l'onglet *Volumes et objets* dans Digital Advisor.  Pour StorageGRID, vous pouvez utiliser cet onglet pour lire l’utilisation des nœuds individuels dans votre environnement de stockage d’objets.
 
-Vous pouvez vous référer à l'onglet *Actifs* dans BlueXP pour afficher ces détails.  Pour afficher les détails d'un abonnement Keystone STaaS spécifique, reportez-vous àlink:../integrations/assets-tab.html["Afficher les actifs associés à un abonnement Keystone"] .  Si vous souhaitez afficher les détails de plusieurs abonnements Keystone , reportez-vous àlink:../integrations/assets.html["Afficher les ressources de vos abonnements Keystone"] .
+Vous pouvez vous référer à la page *Actifs* dans la console NetApp pour afficher ces détails. Pour afficher les détails d'un abonnement Keystone STaaS spécifique, reportez-vous àlink:../integrations/assets-tab.html["Afficher les actifs associés à un abonnement Keystone"] . Si vous souhaitez afficher les détails de plusieurs abonnements Keystone , reportez-vous àlink:../integrations/assets.html["Afficher les ressources de vos abonnements Keystone"] .
 
 
 NOTE: Le titre de cet onglet varie en fonction de la nature du déploiement sur votre site.  Si vous disposez à la fois ONTAP et d'un stockage d'objets, le titre de l'onglet apparaît comme *Volumes et objets*.  Pour ONTAP uniquement, le nom apparaît *Volumes*.  Pour le stockage d'objets StorageGRID , vous pouvez voir l'onglet *Objets*.
@@ -37,7 +37,7 @@ L'onglet *Volumes et objets* offre des informations sur les volumes du système 
 Pour l'abonnement Keystone STaaS sélectionné, vous pouvez voir le nombre total de volumes, leur état de conformité QoS, le nombre de volumes protégés et la capacité totale engagée, consommée et disponible dans tous ces volumes.  Si vous cliquez sur le nombre de volumes non conformes ou protégés, vous accédez à l'onglet *Détails du volume*, où vous pouvez afficher une liste filtrée affichant soit les volumes non conformes, soit les volumes protégés, en fonction de votre sélection.
 
 +
-image:volume-summary-2.png["Onglet Résumé du volume"]
+image:volume-summary-3.png["Onglet Résumé du volume"]
 
 
 
@@ -61,7 +61,7 @@ Vous pouvez utiliser *Masquer/Afficher les colonnes* pour ajouter ou supprimer d
 NOTE: Pour le service complémentaire de protection des données avancé, une colonne supplémentaire apparaît pour indiquer si le volume est un volume principal ou miroir dans la configuration MetroCluster .  Vous pouvez copier les numéros de série des nœuds individuels en cliquant sur le bouton *Copier les numéros de série des nœuds*.
 
 +
-image:volume-details-3.png["Onglet Détails des volumes"]
+image:volume-details-4.png["Onglet Détails des volumes"]
 
 
 

@@ -28,7 +28,7 @@ Il s’agit des données placées sur l’infrastructure Keystone par un client.
 
 La capacité logique minimale facturée chaque mois pendant l'abonnement :
 
-* La capacité est engagée pour chaque niveau de service.
+* La capacité est engagée pour chaque niveau de service de performance.
 * Des capacités engagées et des niveaux de service supplémentaires peuvent être ajoutés au cours de la durée.
 
 
@@ -40,7 +40,7 @@ Pendant la durée d'un abonnement, vous pouvez modifier les capacités engagées
 
 * La capacité engagée peut être diminuée en fonction de certaines conditions.  Pour plus d'informations, voirlink:../concepts/capacity-requirements.html["Réduction de capacité"] .
 * La capacité engagée ne peut pas être augmentée 90 jours avant l'expiration de votre abonnement, sauf si l'abonnement doit être renouvelé pour une durée supplémentaire de 12 mois.
-* Vous pouvez demander des modifications de la capacité engagée via l'interface BlueXP ou auprès de votre Keystone Success Manager (KSM).  Pour plus d'informations sur la demande de modifications, consultezlink:../concepts/gssc.html["Prise en charge de NetApp Keystone"] .
+* Vous pouvez demander des modifications de la capacité engagée via la console ou auprès de votre Keystone Success Manager (KSM). Pour plus d'informations sur la demande de modifications, consultezlink:../concepts/gssc.html["Prise en charge de NetApp Keystone"] .
 
 
 

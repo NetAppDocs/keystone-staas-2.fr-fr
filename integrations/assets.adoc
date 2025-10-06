@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: integrations/assets.html 
-keywords: keystone-aiq, digital advisor keystone, keystone reports, alerts, keystone dashboard, keystone assets tab, ONTAP, StorageGRID 
+keywords: keystone-aiq, digital advisor keystone, keystone reports, alerts, keystone dashboard, keystone assets tab, ONTAP, StorageGRID, NetApp Console, Console 
 summary: 'Utilisez l"onglet Ressources pour afficher les détails des clusters et nœuds ONTAP , ainsi que des grilles, sites et nœuds StorageGRID gérés par vos abonnements Keystone .' 
 ---
 = Afficher les ressources sur plusieurs abonnements Keystone
@@ -14,19 +14,19 @@ summary: 'Utilisez l"onglet Ressources pour afficher les détails des clusters e
 
 
 [role="lead"]
-Le tableau de bord Keystone dans BlueXP vous permet d'afficher des informations détaillées sur les nœuds des clusters, les volumes provisionnés et les nœuds StorageGRID sur plusieurs abonnements Keystone , en fonction de vos autorisations d'accès.  Cette vue n'est pas disponible dans Digital Advisor.
+Le tableau de bord Keystone de la console NetApp vous permet d'afficher des informations détaillées sur les nœuds des clusters, les volumes provisionnés et les nœuds StorageGRID sur plusieurs abonnements Keystone , en fonction de vos autorisations d'accès. Cette vue n'est pas disponible dans Digital Advisor.
 
 [role="tabbed-block"]
 ====
 .Nœuds dans les clusters
 --
 .Étapes
-. Dans le menu de navigation de gauche de BlueXP , sélectionnez *Stockage > Keystone > Ressources*.
+. Dans le menu de navigation de gauche de la console, sélectionnez *Stockage > Keystone > Ressources*.
 +
-L'onglet *Actifs* affiche le sous-onglet *Nœuds du cluster*.
+La page *Actifs* affiche l'onglet *Nœuds du cluster*.
 
 +
-image:bxp-nodes-clusters-multiple-subscription.png["Une capture d'écran des nœuds dans les clusters pour plusieurs abonnements"]
+image:console-nodes-clusters-multiple-subscription.png["Une capture d'écran des nœuds dans les clusters pour plusieurs abonnements"]
 
 +
 Vous pouvez afficher des informations détaillées sur tous les nœuds des clusters sur les abonnements Keystone , y compris les numéros de série des nœuds, l'état, les paramètres d'efficacité du stockage, le type de plate-forme et les détails de capacité.  Vous obtenez également un aperçu de :
@@ -47,10 +47,10 @@ TIP: Vous pouvez personnaliser le tableau à l'aide du sélecteur de colonnesima
 .Volumes en clusters
 --
 .Étapes
-. Dans le menu de navigation de gauche de BlueXP , sélectionnez *Stockage > Keystone > Ressources*.
+. Dans le menu de navigation de gauche de la console, sélectionnez *Stockage > Keystone > Ressources*.
 . Sélectionnez l'onglet *Volumes en clusters*.
 +
-image:bxp-volumes-clusters-multiple-sub.png["Une capture d'écran des volumes en clusters pour plusieurs abonnements"]
+image:console-volumes-clusters-multiple-sub.png["Une capture d'écran des volumes en clusters pour plusieurs abonnements"]
 
 +
 Vous voyez les informations détaillées sur tous les volumes des clusters sur les abonnements Keystone , y compris le nom du volume, le numéro d'abonnement, le numéro de série du nœud, la conformité aux politiques QoS, le nom du cluster, le nom de l'hôte et les niveaux de service de performances.  Vous pouvez surveiller la capacité provisionnée, l’utilisation logique et physique et les données froides.  Vous obtenez également un aperçu de :
@@ -73,10 +73,10 @@ Vous pouvez cliquer sur un numéro d'abonnement dans la colonne *Numéro d'abonn
 .Nœuds dans les grilles
 --
 .Étapes
-. Dans le menu de navigation de gauche de BlueXP , sélectionnez *Stockage > Keystone > Ressources*.
+. Dans le menu de navigation de gauche de la console, sélectionnez *Stockage > Keystone > Ressources*.
 . Sélectionnez l'onglet *Nœuds dans les grilles*.
 +
-image:bxp-nodes-grids-multiple-sub.png["Une capture d'écran des nœuds dans les grilles pour plusieurs abonnements"]
+image:console-nodes-grids-multiple-sub.png["Une capture d'écran des nœuds dans les grilles pour plusieurs abonnements"]
 
 +
 Vous pouvez afficher des informations détaillées sur tous les nœuds des grilles des abonnements Keystone , notamment le nom du nœud, l'ID du nœud, le numéro d'abonnement, le nom de la grille, le type de nœud et le client.  Vous pouvez surveiller la capacité de données consommée et disponible, l'utilisation du processeur et la capacité de données utilisable.

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: integrations/consumption-tab.html 
-keywords: keystone-aiq, digital advisor keystone, consumption trends, subscriptions, historical data, bluexp 
+keywords: keystone-aiq, digital advisor keystone, consumption trends, subscriptions, historical data, bluexp, NetApp Console, Console 
 summary: 'Pour comprendre l"utilisation de votre abonnement, vous pouvez afficher la capacité engagée, la capacité consommée, la capacité disponible, etc.' 
 ---
 = Consultez les tendances de consommation de vos abonnements Keystone
@@ -16,14 +16,14 @@ summary: 'Pour comprendre l"utilisation de votre abonnement, vous pouvez affiche
 [role="lead"]
 Vous pouvez surveiller l'utilisation de votre abonnement en consultant les données historiques de vos abonnements Keystone pour une période donnée.  Cela vous permet d’obtenir des informations précieuses sur vos habitudes d’utilisation.
 
-Vous pouvez consulter les données historiques de vos abonnements Keystone via BlueXP ou Digital Advisor:
+Vous pouvez consulter les données historiques de vos abonnements Keystone via la console NetApp ou Digital Advisor:
 
 [role="tabbed-block"]
 ====
-.BlueXP
+.Console NetApp
 --
 .Étapes
-. Dans le menu de navigation de gauche de BlueXP , sélectionnez *Stockage > Keystone > Abonnements*.
+. Dans le menu de navigation de gauche de la console, sélectionnez *Stockage > Keystone > Abonnements*.
 . Sélectionnez le numéro d'abonnement dans la colonne *Numéro d'abonnement*.
 +
 Vous êtes redirigé vers l'onglet *Consommation actuelle*.
@@ -125,7 +125,7 @@ Le burst est la différence entre la capacité consommée et la capacité engag�
 
 == Afficher les rafales accumulées
 
-Vous pouvez consulter l'utilisation des données en rafale accumulées via BlueXP ou Digital Advisor.  Si vous avez sélectionné *Rafale accumulée* dans la liste déroulante *Affichage* de l'onglet *Tendance de consommation* dans BlueXP, ou l'option *Rafale accumulée facturée* dans l'onglet *Tendance de consommation* dans Digital Advisor, vous pouvez voir l'utilisation des données accumulées en rafale sur une base mensuelle ou trimestrielle, en fonction de la période de facturation sélectionnée.  Ces données sont disponibles pour les 12 derniers mois facturés et vous pouvez effectuer une requête par plage de dates jusqu'aux 30 derniers mois.  Les graphiques à barres affichent les données facturées et si l'utilisation n'a pas encore été facturée, elle sera marquée comme _En attente_ pour cette période.
+Vous pouvez consulter l'utilisation des données en rafale accumulées via la console ou le Digital Advisor.  Si vous avez sélectionné *Rafale accumulée* dans la liste déroulante *Affichage* de l'onglet *Tendance de consommation* de la console, ou l'option *Rafale accumulée facturée* dans l'onglet *Tendance de consommation* de Digital Advisor, vous pouvez voir l'utilisation des données accumulées en rafale sur une base mensuelle ou trimestrielle, selon la période de facturation sélectionnée. Ces données sont disponibles pour les 12 derniers mois facturés et vous pouvez effectuer une requête par plage de dates jusqu'aux 30 derniers mois. Les graphiques à barres affichent les données facturées et si l'utilisation n'a pas encore été facturée, elle sera marquée comme _En attente_ pour cette période.
 
 
 TIP: L'utilisation en rafale accumulée facturée est calculée par période de facturation, en fonction de la capacité engagée et consommée pour un niveau de service de performance.
@@ -142,7 +142,7 @@ Cette fonctionnalité est disponible en mode aperçu uniquement.  Contactez votr
 
 == Afficher l'utilisation quotidienne des données accumulées
 
-Vous pouvez consulter l'utilisation quotidienne des données accumulées pour une période de facturation mensuelle ou trimestrielle via BlueXP ou Digital Advisor.  Dans BlueXP, le tableau *Rafale accumulée par jours* fournit des données détaillées, notamment l'horodatage, la capacité engagée, consommée et la capacité de rafale accumulée si vous sélectionnez *Rafale accumulée* dans la liste déroulante *Affichage* de l'onglet *Tendance de consommation*.
+Vous pouvez consulter l'utilisation quotidienne des données accumulées pour une période de facturation mensuelle ou trimestrielle via la console ou le Digital Advisor.  Dans la console, le tableau *Rafale accumulée par jours* fournit des données détaillées, notamment l'horodatage, la capacité engagée, consommée et la capacité de rafale accumulée si vous sélectionnez *Rafale accumulée* dans la liste déroulante *Affichage* de l'onglet *Tendance de consommation*.
 
 image:bxp-accrued-burst-days.png["capture d'écran montrant le tableau des rafales accumulées par jour"]
 
