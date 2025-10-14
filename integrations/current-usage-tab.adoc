@@ -29,16 +29,16 @@ Pour afficher l'état de consommation actuel de vos abonnements via la console N
 Vous êtes redirigé vers l'onglet *Consommation actuelle*.
 
 +
-image:bxp-current-consumption-graph.png["détails de la consommation actuelle au format graphique"]
+image:console-current-consumption-graph.png["détails de la consommation actuelle au format graphique"]
 
 +
 Pour l'abonnement sélectionné, vous pouvez afficher les détails de consommation sous forme de tableau ou de graphique à l'aide de l'option *Tableau* ou *Graphique* de la liste déroulante *Afficher sous*.  Dans la vue graphique, vous pouvez voir la consommation actuelle par niveau de service de performance, y compris la capacité utilisée, la capacité provisionnée, la limite de capacité engagée et la limite de capacité de pointe.
 
 +
-Dans la vue tableau, vous pouvez voir des détails tels que la capacité maximale consommée et les jours restants jusqu'à l'expiration.  Dans le cadre de la surveillance de votre utilisation d'abonnement, vous pouvez afficher le nom du niveau de service de performances, l'état de consommation, les capacités engagées et utilisées, les capacités provisionnées et en rafale, la capacité disponible et les volumes.  Vous pouvez personnaliser le tableau à l'aide du sélecteur de colonnesimage:column-selector.png["icône de sélecteur de colonne"] icône.
+Dans la vue tableau, vous pouvez voir des détails tels que la capacité maximale consommée et les jours restants jusqu'à l'expiration. Dans le cadre de la surveillance de l'utilisation de votre abonnement, vous pouvez afficher le nom du niveau de service de performances, l'utilisation de la capacité, les capacités engagées et utilisées, les capacités provisionnées et en rafale, la capacité disponible et les volumes. Vous pouvez personnaliser le tableau à l'aide du sélecteur de colonnesimage:column-selector.png["icône de sélecteur de colonne"] icône.
 
 +
-image:bxp-current-consumption-table.png["détails de la consommation actuelle sous forme de tableau"]
+image:console-current-consumption-table.png["détails de la consommation actuelle sous forme de tableau"]
 
 
 
