@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: concepts/gssc.html 
+permalink: concepts/support-services.html 
 keywords: Keystone support, service request, support ticket 
 summary: Si vous avez besoin d’aide, contactez l’équipe de support NetApp Keystone . 
 ---
@@ -52,7 +52,7 @@ Le Keystone Success Manager (KSM) travaille en étroite collaboration avec vous 
 
 Lors de l'intégration, si vous avez reçu des informations d'identification pour accéder et utiliser Netapp Keystone ServiceNow, vous pouvez utiliser le portail pour générer des demandes de service pour les problèmes liés à vos abonnements Keystone :
 
-https://netappgssc.service-now.com/csm[]
+https://netappkeystone.service-now.com/csm[]
 
 Assurez-vous d’avoir les détails du système, les journaux et les informations associées prêts avant de formuler la demande de service.  Lorsque vous faites une demande de service, l'équipe d'assistance Keystone reçoit le ticket d'assistance et accède aux informations pour le dépannage.  Vous pouvez suivre votre ticket ServiceNow pour connaître le statut et la résolution.
 
