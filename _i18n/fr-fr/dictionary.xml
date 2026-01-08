@@ -1461,7 +1461,6 @@
   <block id="8dff4f66fbdc44d35cadc9cf566cab06" category="paragraph">Le même serveur doit également disposer des packages tiers suivants :</block>
   <block id="8a43eb05c3b74f093be84dcedec105e4" category="list-text">podman (gestionnaire POD)</block>
   <block id="e284374909d82a81c5150b7908e00147" category="list-text">chronie</block>
-  <block id="3c048c264642c17c1d0bbd50b9e23bfe" category="list-text">Python 3 (3.6.8 à 3.9.13)</block>
   <block id="9ce62eb0f672e21ccd91e690812cac59" category="list-title">Serveur Keystone Collector VM :</block>
   <block id="3cd8ee624224889231554d68f6c0f471" category="list-text">Noyau : 2 processeurs</block>
   <block id="729c0bdf36ec5a81531eff6e6786c89d" category="list-text">RAM : 4 Go de RAM</block>
@@ -2620,4 +2619,5 @@
   <block id="7a29351a5aff62fec009044b13aad77f" category="paragraph">Les abonnements affichent incorrectement le statut *Dépassement de la limite de consommation* dans le tableau de bord Digital Advisor alors que la consommation reste dans les limites de consommation autorisées.</block>
   <block id="81899b5a6230dd4cf7e0bff4dbc71dfb" category="paragraph">08/12/2025</block>
   <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">8 décembre 2025</block>
+  <block id="ee53a2d144b153a8ad44855abe0429a8" category="list-text">Python 3 (3.9.14 à 3.11.8)</block>
 </blocks>

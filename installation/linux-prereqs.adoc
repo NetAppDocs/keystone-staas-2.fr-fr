@@ -36,7 +36,7 @@ Le même serveur doit également disposer des packages tiers suivants :
 * podman (gestionnaire POD)
 * sos
 * chronie
-* Python 3 (3.6.8 à 3.9.13)
+* Python 3 (3.9.14 à 3.11.8)
 
 
 .Serveur Keystone Collector VM :
