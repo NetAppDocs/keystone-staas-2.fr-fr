@@ -4,7 +4,7 @@ permalink: concepts/committed-capacity-billing.html
 keywords: Billing based on committed capacity, committed capacity billing 
 summary: 'La capacité engagée est la capacité engagée pour un niveau de service particulier lors de l"achat de l"abonnement.' 
 ---
-= Facturation basée sur la capacité engagée
+= Comprendre la facturation de la capacité engagée de Keystone
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: concepts/adp.html
 keywords: data protection advanced 
 summary: Utilisez le service complémentaire de protection des données avancé pour garantir une protection efficace des données des charges de travail critiques. 
 ---
-= En savoir plus sur la protection avancée des données
+= Module complémentaire de protection des données avancée pour Keystone
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

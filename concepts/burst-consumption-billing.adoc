@@ -4,7 +4,7 @@ permalink: concepts/burst-consumption-billing.html
 keywords: burst consumption billing 
 summary: La facturation Keystone STaaS est basée sur la capacité de pointe, qui correspond à la capacité que vous consommez, en plus de la capacité engagée de votre abonnement. 
 ---
-= Facturation basée sur la consommation en rafale
+= Comprendre la facturation de la consommation en rafale de Keystone
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
