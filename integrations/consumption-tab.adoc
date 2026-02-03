@@ -125,18 +125,20 @@ Le burst est la différence entre la capacité consommée et la capacité engag�
 
 == Afficher les rafales accumulées
 
-Vous pouvez consulter l'utilisation des données en rafale accumulées via la console ou le Digital Advisor.  Si vous avez sélectionné *Rafale accumulée* dans la liste déroulante *Affichage* de l'onglet *Tendance de consommation* de la console, ou l'option *Rafale accumulée facturée* dans l'onglet *Tendance de consommation* de Digital Advisor, vous pouvez voir l'utilisation des données accumulées en rafale sur une base mensuelle ou trimestrielle, selon la période de facturation sélectionnée. Ces données sont disponibles pour les 12 derniers mois facturés et vous pouvez effectuer une requête par plage de dates jusqu'aux 30 derniers mois. Les graphiques à barres affichent les données facturées et si l'utilisation n'a pas encore été facturée, elle sera marquée comme _En attente_ pour cette période.
+Vous pouvez consulter la consommation de données de burst cumulée via la Console ou Digital Advisor. Si vous avez sélectionné *Accrued burst* dans le menu déroulant *View* de l’onglet *Consumption trend* dans la Console, ou l’option *Invoiced Accrued Burst* dans l’onglet *Consumption Trend* de Digital Advisor, vous pouvez voir la consommation de données de burst cumulée sur une base mensuelle ou trimestrielle, selon la période de facturation sélectionnée. Ces données sont disponibles pour les 12 derniers mois facturés, et vous pouvez effectuer une requête par plage de dates jusqu’à 30 mois en arrière.
+
+[TIP]
+====
+* Dans la Console, vous pouvez interagir avec le graphique de facturation cumulée pour filtrer la consommation de données quotidienne. Pour en savoir plus, consultez link:../integrations/consumption-tab.html#view-daily-accrued-burst-data-usage["Afficher l'utilisation quotidienne des données accumulées"].
+* L'utilisation en rafale accumulée facturée est calculée par période de facturation, en fonction de la capacité engagée et consommée pour un niveau de service de performance.
 
 
-TIP: L'utilisation en rafale accumulée facturée est calculée par période de facturation, en fonction de la capacité engagée et consommée pour un niveau de service de performance.
-
+====
 Pour une période de facturation trimestrielle, si l'abonnement débute à une date autre que le 1er du mois, la facture trimestrielle couvrira la période de 90 jours suivante.  Par exemple, si votre abonnement débute le 15 août, la facture sera générée pour la période du 15 août au 14 octobre.
 
 Si vous passez d'une facturation trimestrielle à une facturation mensuelle, la facture trimestrielle couvrira toujours la période de 90 jours, avec deux factures générées au cours du dernier mois du trimestre : une pour la période de facturation trimestrielle et une autre pour les jours restants de ce mois.  Cette transition permet à la période de facturation mensuelle de commencer le 1er du mois suivant.  Par exemple, si votre abonnement commence le 15 octobre, vous recevrez deux factures en janvier, une pour la période du 15 octobre au 14 janvier et une autre pour la période du 15 au 31 janvier, avant le début de la période de facturation mensuelle le 1er février.
 
 image:accr-burst-2.png["utilisation en rafale accumulée trimestriellement"]
-
-Cette fonctionnalité est disponible en mode aperçu uniquement.  Contactez votre KSM pour en savoir plus sur cette fonctionnalité.
 
 
 
@@ -144,7 +146,9 @@ Cette fonctionnalité est disponible en mode aperçu uniquement.  Contactez votr
 
 Vous pouvez consulter l'utilisation quotidienne des données accumulées pour une période de facturation mensuelle ou trimestrielle via la console ou le Digital Advisor.  Dans la console, le tableau *Rafale accumulée par jours* fournit des données détaillées, notamment l'horodatage, la capacité engagée, consommée et la capacité de rafale accumulée si vous sélectionnez *Rafale accumulée* dans la liste déroulante *Affichage* de l'onglet *Tendance de consommation*.
 
-image:bxp-accrued-burst-days.png["capture d'écran montrant le tableau des rafales accumulées par jour"]
+Dans la Console, vous pouvez filtrer le tableau en sélectionnant une barre qui représente une période de facturation dans le graphique de facturation cumulée par rafale. Une fois filtré, le tableau affiche uniquement les jours de la période de facturation sélectionnée. Pour afficher à nouveau l'ensemble des données, utilisez l'option *Clear filters*. Si aucune donnée n'est disponible pour la période sélectionnée, un message indique qu'aucune donnée n'est disponible.
+
+image:bxp-accrued-burst-days-1.png["capture d'écran montrant le tableau des rafales accumulées par jour"]
 
 Dans Digital Advisor, lorsque vous cliquez sur la barre qui affiche les données facturées à partir de l'option *Invoiced Accured Burst*, vous voyez la section Capacité provisionnée facturable sous le graphique à barres, offrant des options d'affichage de graphique et de tableau.  La vue graphique par défaut affiche l'utilisation quotidienne des données en rafale accumulées dans un format de graphique linéaire, montrant les changements d'utilisation au fil du temps.
 
