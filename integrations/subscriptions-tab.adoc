@@ -34,7 +34,7 @@ Vous voyez les indicateurs clés tels que l’utilisation de la capacité, l’�
 Vous pouvez voir les détails suivants dans le tableau :
 
 +
-** *Numéro d'abonnement* : Le numéro d'abonnement de l'abonnement Keystone attribué par NetApp.
+** *Numéro d’abonnement* : Le numéro d’abonnement Keystone attribué par NetApp. Les abonnements avec l’icône image:metrocluster-icon.png["MetroCluster subscription symbole"] sont des abonnements MetroCluster. Pour en savoir plus sur les abonnements MetroCluster, consultez link:../integrations/adp-tab.html["Consultez la consommation et la santé de vos abonnements Keystone MetroCluster"].
 ** *ID de suivi* : L'ID de suivi attribué au moment de l'activation de l'abonnement.  Il s'agit d'un identifiant unique pour chaque abonnement et site, utilisé pour suivre l'abonnement.
 ** *Nom du client* : Le nom du client associé à l'abonnement Keystone .
 ** *Abonnements liés* : Si vous avez des abonnements secondaires liés à votre abonnement principal, cette colonne répertorie les numéros d'abonnement liés à l'abonnement principal.  Ce numéro d'abonnement peut être celui de votre abonnement principal ou secondaire (lié).
@@ -78,7 +78,7 @@ Pour certains champs et colonnes, vous pouvez voir des icônes d'information ou 
 ** *ID de suivi* : L'ID de suivi attribué au moment de l'activation de l'abonnement.  Il s'agit d'un identifiant unique pour chaque abonnement et site.
 +
 
-TIP: Si vous êtes abonné au service complémentaire de protection avancée des données, vous pouvez cliquer sur l'info-bulle en regard de votre numéro d'abonnement pour afficher l'ID de suivi de l'abonnement partenaire dans une configuration MetroCluster .  Pour afficher la consommation détaillée par abonnement partenaire dans une configuration MetroCluster , voirlink:../integrations/consumption-tab.html#reference-charts-for-advanced-data-protection-for-metrocluster["Tableaux de référence pour la protection avancée des données"] .
+TIP: Si vous avez souscrit au service complémentaire de protection des données avancée, vous pouvez cliquer sur l'infobulle en regard de votre numéro d'abonnement pour afficher l'identifiant de suivi de l'abonnement partenaire dans une configuration MetroCluster. Pour consulter le détail de la consommation par abonnement partenaire dans une configuration MetroCluster, voir link:../integrations/adp-tab.html["Afficher la consommation et l'état des abonnements MetroCluster"].
 
 ** *Type d'utilisation* : Vous êtes peut-être abonné à plusieurs versions de Keystone .  Les règles du plan tarifaire pour les niveaux de service de performance peuvent différer selon les versions d'abonnement.  En regardant la valeur dans cette colonne, vous savez si le type d’utilisation est facturé en fonction de l’utilisation provisionnée, physique ou logique.  Pour en savoir plus sur la version 1, reportez-vous à https://docs.netapp.com/us-en/keystone/index.html["Services d'abonnement Keystone | Documentation de la version 1"^] .
 ** *Période de facturation* : La période de facturation de l'abonnement.
