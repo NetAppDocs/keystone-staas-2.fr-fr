@@ -38,6 +38,10 @@ Les données de consommation historiques pour chaque niveau de service de perfor
 NOTE: Vous pouvez sélectionner *Rafale accumulée* dans la liste déroulante *Afficher* si vous souhaitez afficher les données d'utilisation historiques des rafales pour lesquelles des factures ont été générées.  Vous pouvez utiliser ces données pour analyser l’utilisation facturée reflétée dans votre facture.  Pour en savoir plus, consultezlink:../integrations/consumption-tab.html#view-accrued-burst["Afficher les rafales accumulées"] .
 
 +
+
+NOTE: Si vous avez souscrit à des services complémentaires tels que la protection des données (ADP) ou Data Infrastructure Insights (DII), les données de consommation de ces services apparaissent avec vos niveaux de service de performance de base dans les vues de consommation historique et de pics cumulés. Pour en savoir plus sur les services complémentaires, consultez link:../concepts/adp.html["Découvrez nos services complémentaires"].
+
++
 image:bxp-consumption-trend.png["capture d'écran affichant l'historique de consommation"]
 
 +
@@ -159,3 +163,14 @@ Un exemple d'image montrant l'utilisation quotidienne des données accumulées d
 image:invoiced-daily-accr-burst-date.png["capture d'écran montrant les données d'utilisation en rafale dans un format de graphique linéaire"]
 
 Vous pouvez passer à une vue tableau en cliquant sur l'option *Tableau* dans le coin supérieur droit du graphique.  La vue du tableau fournit des mesures d'utilisation quotidiennes détaillées, notamment le niveau de service des performances, l'horodatage, la capacité engagée, la capacité consommée et la capacité provisionnée facturable.  Vous pouvez également générer un rapport de ces détails au format CSV pour une utilisation et une comparaison ultérieures.
+
+*Informations connexes*
+
+* link:../integrations/dashboard-overview.html["Comprendre le tableau de bord Keystone"]
+* link:../integrations/subscriptions-tab.html["Afficher les détails de vos abonnements Keystone"]
+* link:../integrations/current-usage-tab.html["Consultez la consommation actuelle de vos abonnements Keystone"]
+* link:../integrations/subscription-timeline.html["Consultez la chronologie de vos abonnements Keystone"]
+* link:../integrations/assets-tab.html["Afficher les actifs associés à un abonnement Keystone"]
+* link:../integrations/monitoring-alerts.html["Afficher et gérer les alertes et les moniteurs"]
+* link:../integrations/volumes-objects-tab.html["Afficher les volumes et les détails des objets"]
+
