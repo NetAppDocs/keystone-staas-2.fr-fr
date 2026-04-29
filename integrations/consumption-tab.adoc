@@ -39,7 +39,14 @@ NOTE: Vous pouvez sélectionner *Rafale accumulée* dans la liste déroulante *A
 
 +
 
-NOTE: Si vous avez souscrit à des services complémentaires tels que protection des données (ADP) ou Data Infrastructure Insights (DII), les données de consommation de ces services apparaissent avec vos niveaux de service de performance de base dans les vues de consommation historique et de pics cumulés. Pour en savoir plus sur les services complémentaires, consultez link:../concepts/adp.html["Découvrez nos services complémentaires"]. image:consumption-trend-burst.png["capture d'écran affichant l'historique de consommation"]
+NOTE: Vous pouvez utiliser le bouton *Prévisions* pour afficher la consommation de capacité projetée dans la vue *Historique de consommation* et le pic de consommation cumulé projeté dans la vue *Pic de consommation cumulé*. Pour en savoir plus, consultez link:../integrations/consumption-tab.html#view-forecast-data["Consulter les données prévisionnelles"].
+
++
+
+NOTE: Si vous avez souscrit à des services complémentaires tels que protection des données (ADP) ou Data Infrastructure Insights (DII), les données de consommation de ces services apparaissent avec vos niveaux de service de performance de base dans les vues de consommation historique et de pics cumulés. Pour en savoir plus sur les services complémentaires, consultez link:../concepts/adp.html["Découvrez nos services complémentaires"].
+
++
+image:consumption-trend-burst.png["capture d'écran affichant l'historique de consommation"]
 
 +
 Le graphique linéaire affiche les données de consommation historiques et permet aux utilisateurs d'analyser les tendances sur une période sélectionnée. Le graphique présente les indicateurs suivants :
@@ -130,20 +137,6 @@ Vous pouvez cliquer sur le bouton bascule *Afficher l'utilisation actuelle* pour
 ====
 
 
-== Consulter les données prévisionnelles
-
-Vous pouvez consulter les prévisions d'utilisation de la capacité pour les 120 prochains jours à compter de la date actuelle grâce à l'option *Forecast* disponible dans la vue *Historical consumption* de l'onglet *Consumption trend* dans la Console. L'option est activée par défaut.
-
-Par défaut, le graphique affiche les 30 derniers jours de consommation historique et une projection sur 120 jours à partir de la date actuelle sur le même graphique. Jusqu'à 30 points de données sont tracés au total (20 pour les données historiques et 10 pour les données de prévision), avec une ligne verticale séparant les deux segments.
-
-image:forecast-1.png["capture d'écran montrant les données de prévision"]
-
-Si vous sélectionnez une période qui ne se termine pas à la date du jour, les prévisions sont automatiquement désactivées. Pour les réactiver, une boîte de dialogue de confirmation vous informe que les données de prévision ne sont disponibles que lorsque la période sélectionnée se termine à la date du jour. La confirmation rétablit l'affichage par défaut, correspondant aux 30 derniers jours de données historiques et aux 120 prochains jours de prévision.
-
-Si la consommation prévue devrait dépasser la capacité de pointe, un indicateur d'alerte apparaît sur le graphique, recommandant une mise à niveau de la capacité.
-
-
-
 == Calcul des rafales accumulées
 
 L'utilisation en rafale accumulée pour un mois entier est calculée comme suit :
@@ -160,9 +153,9 @@ Le burst est la différence entre la capacité consommée et la capacité engag�
 
 == Afficher les rafales accumulées
 
-Vous pouvez consulter la consommation de données de burst cumulée via la Console ou Digital Advisor. Si vous avez sélectionné *Accrued burst* dans le menu déroulant *View* de l’onglet *Consumption trend* dans la Console, ou l’option *Invoiced Accrued Burst* dans l’onglet *Consumption Trend* de Digital Advisor, vous pouvez voir la consommation de données de burst cumulée sur une base mensuelle ou trimestrielle, selon la période de facturation sélectionnée. Ces données sont disponibles pour les 12 derniers mois facturés, et vous pouvez effectuer une requête par plage de dates jusqu’à 30 mois en arrière.
+Vous pouvez consulter la consommation de données de burst cumulée via la Console ou Digital Advisor. Si vous avez sélectionné *Accrued burst* dans le menu déroulant *View* de l’onglet *Consumption trend* dans la Console, ou l’option *Invoiced Accrued Burst* dans l’onglet *Consumption Trend* de Digital Advisor, vous pouvez voir la consommation de données de burst cumulée sur une base mensuelle ou trimestrielle, selon la période de facturation sélectionnée.
 
-Dans la Console, en plus de la consommation en rafale facturée, vous pouvez également consulter la consommation en rafale non facturée (cumulée mais pas encore facturée) et la consommation en rafale provisoire (cumulée au cours de la période de facturation actuelle et pas encore facturée).
+Dans la console, lorsque l’option *Prévisions* est désactivée, vous pouvez consulter la consommation de pointe facturée, ainsi que la consommation de pointe non facturée (cumulée mais non encore facturée) et la consommation de pointe provisoire (cumulée au cours de la période de facturation actuelle et non encore facturée). Lorsque l’option *Prévisions* est activée, le graphique affiche également la consommation de pointe cumulée projetée pour les 120 prochains jours à compter de la date actuelle. Pour en savoir plus sur l’option *Prévisions*, consultez link:../integrations/consumption-tab.html#view-forecast-data["Consulter les données prévisionnelles"].
 
 image:accr-burst-provision-invoice.png["Capture d'écran montrant l'utilisation cumulée en rafale dans la Console"]
 
@@ -181,15 +174,36 @@ image:accr-burst-2.png["utilisation en rafale accumulée trimestriellement"]
 
 
 
+== Consulter les données prévisionnelles
+
+Dans la console, vous pouvez utiliser le bouton *Prévisions* de l'onglet *Tendance de consommation* pour afficher l’utilisation de capacité projetée dans la vue *Consommation historique* et le pic cumulé projeté dans la vue *Pic cumulé*. Le bouton est activé par défaut dans les deux vues.
+
+Dans la vue *Historique de consommation*, le graphique affiche les 30 derniers jours de données historiques de consommation et une projection sur 120 jours à partir de la date actuelle sur le même graphique. Jusqu'à 30 points de données sont tracés au total (20 pour les données historiques et 10 pour les données de prévision), avec une ligne verticale séparant les deux segments.
+
+image:forecast-1.png["capture d'écran montrant les données de prévision"]
+
+Dans la vue *Consommation cumulée*, le graphique affiche les 6 derniers mois d’historique de consommation cumulée et une projection sur 120 jours à partir de la date actuelle, avec une ligne verticale séparant les données historiques et les données prévisionnelles. La barre de la période de facturation en cours affiche à la fois l’utilisation provisoire de la consommation cumulée et les données prévisionnelles pour les jours restants. Vous pouvez cliquer sur n’importe quelle barre pour afficher la répartition quotidienne dans le tableau *Consommation cumulée par jour*. Pour en savoir plus sur le tableau *Consommation cumulée par jour*, consultez link:../integrations/consumption-tab.html#view-daily-accrued-burst-data-usage["Afficher l'utilisation quotidienne des données accumulées"].
+
+image:accrued-burst-forecast.png["capture d'écran montrant les prévisions de rafales accumulées"]
+
+Si vous sélectionnez une période ne se terminant pas à la date du jour, les prévisions sont automatiquement désactivées. Pour les réactiver, une boîte de dialogue de confirmation vous informe que les données de prévision ne sont disponibles que lorsque la période sélectionnée se termine à la date du jour. Si vous confirmez la boîte de dialogue, l'affichage revient à la plage par défaut pour la vue sélectionnée : les 30 derniers jours de données historiques plus les 120 prochains jours de prévision dans la vue *Historical consumption*, ou les 6 derniers mois de données historiques de pics de consommation cumulés plus les 120 prochains jours de prévision dans la vue *Accrued burst*.
+
+Si la consommation prévue risque de dépasser la capacité engagée, un indicateur d'alerte orange apparaît sur le graphique, recommandant une augmentation de capacité. Si elle risque de dépasser la capacité de pointe, un indicateur d'alerte rouge apparaît également, recommandant une augmentation de capacité.
+
+
+
 == Afficher l'utilisation quotidienne des données accumulées
 
 Vous pouvez consulter l'utilisation quotidienne des données accumulées pour une période de facturation mensuelle ou trimestrielle via la console ou le Digital Advisor.  Dans la console, le tableau *Rafale accumulée par jours* fournit des données détaillées, notamment l'horodatage, la capacité engagée, consommée et la capacité de rafale accumulée si vous sélectionnez *Rafale accumulée* dans la liste déroulante *Affichage* de l'onglet *Tendance de consommation*.
 
 Dans la Console, vous pouvez filtrer le tableau en sélectionnant une barre qui représente une période de facturation dans le graphique de facturation cumulée par rafale. Une fois filtré, le tableau affiche uniquement les jours de la période de facturation sélectionnée. Pour afficher à nouveau l'ensemble des données, utilisez l'option *Clear filters*. Si aucune donnée n'est disponible pour la période sélectionnée, un message indique qu'aucune donnée n'est disponible.
 
+
+NOTE: Les données affichées dans le graphique dépendent de l’activation ou de la désactivation de l’option *Prévisions*.
+
 image:bxp-accrued-burst-days-1.png["capture d'écran montrant le tableau des rafales accumulées par jour"]
 
-Vous pouvez également télécharger les données au format Excel, y compris le statut des rafales (facturées, non facturées ou provisoires) et la facturation par
+Vous pouvez également télécharger les données disponibles au format Excel, y compris le statut des rafales (facturées, non facturées, provisoires ou prévisionnelles, selon le cas) et la période de facturation.
 
 Dans Digital Advisor, lorsque vous cliquez sur la barre qui affiche les données facturées à partir de l'option *Invoiced Accured Burst*, vous voyez la section Capacité provisionnée facturable sous le graphique à barres, offrant des options d'affichage de graphique et de tableau.  La vue graphique par défaut affiche l'utilisation quotidienne des données en rafale accumulées dans un format de graphique linéaire, montrant les changements d'utilisation au fil du temps.
 
