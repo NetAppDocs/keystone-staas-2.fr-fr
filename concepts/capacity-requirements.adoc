@@ -18,6 +18,7 @@ Les exigences de capacité pour les niveaux de service de performances Keystone 
 
 
 
+[[minimum-capacity-requirements-for-file-and-block-services]]
 == Exigences de capacité minimale pour les services de fichiers et de blocs
 
 La capacité minimale et la capacité incrémentielle autorisées par abonnement sont décrites dans le tableau suivant.  La capacité minimale par niveau de service de performance est définie comme étant la même pour tous les mouvements de vente Keystone .  La capacité supérieure à la capacité minimale soit au début de l'abonnement, soit en tant que service complémentaire à l'abonnement, soit après réaffectation pendant l'abonnement est également structurée dans le tableau.
@@ -44,6 +45,7 @@ Capacité incrémentielle (et en multiples) autorisée en complément lors de l'
 |===
 
 
+[[minimum-capacity-requirements-for-object-storage]]
 == Exigences de capacité minimale pour le stockage d'objets
 
 Vous pouvez voir les exigences de capacité minimale pour le stockage d'objets dans le tableau suivant :
@@ -94,6 +96,7 @@ Non Concerné
 |===
 
 
+[[capacity-adjustments]]
 == Ajustements de capacité
 
 En savoir plus sur les ajustements de capacité :
@@ -107,6 +110,7 @@ En savoir plus sur les ajustements de capacité :
 
 
 
+[[capacity-reduction]]
 === Réduction de capacité
 
 La réduction de capacité (annuelle) s'applique au modèle de paiement _Annuel à l'avance_ et aux déploiements sur site uniquement.  Il n'est pas disponible pour les services cloud ou les services cloud hybrides.  Il prévoit une capacité sur site, qui peut être réduite jusqu'à 25 % par niveau de service et par abonnement.  Cette réduction est autorisée une fois par an et prend effet au début de la période de facturation annuelle suivante.  Les paiements annuels basés sur les services sur site doivent être >= 200 000 $ à tout moment pendant la durée du contrat afin de profiter de la réduction de capacité.  Étant donné qu’il est pris en charge uniquement pour les déploiements sur site, ce modèle de facturation ne permet pas de réaffecter les dépenses des services sur site aux services cloud.  Un exemple de réduction de capacité annuelle est illustré dans l’image suivante.
@@ -115,6 +119,7 @@ image:reallocation.png["logique de réallocation expliquée"]
 
 
 
+[[quarterly-spend-reallocation]]
 === Réaffectation des dépenses trimestrielles
 
 Keystone STaaS vous offre la possibilité de réaffecter les dépenses de service sur site aux dépenses Cloud Volumes ONTAP .

@@ -18,10 +18,12 @@ Les limitations connues identifient les plates-formes, les appareils ou les fonc
 
 
 
+[[keystone-collector-limitations]]
 == Limitations de Keystone Collector
 
 
 
+[[keystone-collector-authentication-failure-with-storagegrid-sso-enabled]]
 === Échec de l'authentification de Keystone Collector avec StorageGRID SSO activé
 
 Keystone Collector ne prend pas en charge la mesure lorsque l'authentification unique (SSO) est activée sur le système StorageGRID .  Le message d’erreur suivant s’affiche dans les journaux :
@@ -32,6 +34,7 @@ Voir l'article de la base de connaissanceslink:https://kb.netapp.com/hybrid/Keys
 
 
 
+[[keystone-collector-cannot-start-on-vsphere-8-0-update-1]]
 === Keystone Collector ne peut pas démarrer sur vSphere 8.0 Update 1
 
 Une machine virtuelle Keystone Collector (VM) avec VMware vSphere version 8.0 Update 1 ne peut pas être activée et le message d'erreur suivant s'affiche :
@@ -42,6 +45,7 @@ Voir l'article de la base de connaissanceslink:https://kb.netapp.com/hybrid/Keys
 
 
 
+[[support-bundle-cannot-be-generated-over-kerberos]]
 === Le bundle de support ne peut pas être généré via Kerberos
 
 Si le répertoire de base de Keystone Collector est monté sur NFSv4 à l'aide de Kerberos, le bundle de support n'est pas généré et le message d'erreur suivant s'affiche :
@@ -52,12 +56,14 @@ Voir l'article de la base de connaissances https://kb.netapp.com/hybrid/Keystone
 
 
 
+[[keystone-collector-cannot-communicate-with-hosts-within-specific-network-range]]
 === Keystone Collector ne peut pas communiquer avec les hôtes dans une plage réseau spécifique
 
 Keystone Collector ne peut pas communiquer avec les appareils situés dans la plage réseau 10.88.0.0/16 lorsque le `ks-collector` le service est en cours d'exécution.  Voir l'article de la base de connaissanceslink:https://kb.netapp.com/hybrid/Keystone/Collector/Keystone_Collector_container_conflict_with_customer_network["Conflit entre le conteneur Keystone Collector et le réseau client"^] pour information et résolution.
 
 
 
+[[keystone-collector-cannot-verify-customer-root-ssl-ca-certificate]]
 === Keystone Collector ne peut pas vérifier le certificat SSL CA racine du client
 
 Si l'inspection SSL/TLS est activée au niveau du pare-feu de frontière dans un environnement pour inspecter le trafic SSL/TLS, Keystone Collector ne peut pas établir de connexion HTTPS, car le certificat CA racine du client n'est pas approuvé.

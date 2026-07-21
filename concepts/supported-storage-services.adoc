@@ -26,6 +26,7 @@ Les services Keystone STaaS peuvent être utilisés en même temps.  Par exemple
 
 
 
+[[services-for-file-block-and-object-storage]]
 == Services de stockage de fichiers, de blocs et d'objets
 
 Les services Keystone STaaS pour le stockage de fichiers et de blocs ONTAP et le stockage d'objets StorageGRID prennent en charge plusieurs fonctionnalités et protocoles, et sont décrits dans le tableau suivant :
@@ -96,6 +97,7 @@ NOTE: ^1^ Pour plus d'informations sur la protection contre les ransomwares dans
 
 
 
+[[services-for-cloud-storage]]
 == Services de stockage en nuage
 
 Keystone STaaS fournit des services de stockage cloud.  Keystone STaaS prend en charge les fonctionnalités de gestion des données Cloud Volumes ONTAP sur Amazon Web Services (AWS), Microsoft Azure et Google Cloud Platform.

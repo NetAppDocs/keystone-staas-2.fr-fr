@@ -22,6 +22,7 @@ Vous pouvez surveiller les indicateurs de consommation et de santé de votre Met
 
 
 
+[[understand-pricing]]
 == Comprendre la tarification
 
 Le service complémentaire de protection avancée des données est tarifé en fonction de la capacité engagée sur chaque site.  Cela permet de déterminer le coût réel du service avancé de protection des données en $/Tio. Les frais supplémentaires s'appliquent à toutes les capacités de votre abonnement, y compris les données sources, les copies en miroir et les données non en miroir.
@@ -37,6 +38,7 @@ Notez ce qui suit :
 
 
 
+[[supported-metrocluster-configurations]]
 == Configurations MetroCluster prises en charge
 
 Keystone prend en charge les scénarios de déploiement MetroCluster suivants :

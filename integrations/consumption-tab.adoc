@@ -137,6 +137,7 @@ Vous pouvez cliquer sur le bouton bascule *Afficher l'utilisation actuelle* pour
 ====
 
 
+[[accrued-burst-computation]]
 == Calcul des rafales accumulées
 
 L'utilisation en rafale accumulée pour un mois entier est calculée comme suit :
@@ -151,6 +152,7 @@ Le burst est la différence entre la capacité consommée et la capacité engag�
 
 
 
+[[view-accrued-burst]]
 == Afficher les rafales accumulées
 
 Vous pouvez consulter la consommation de données de burst cumulée via la Console ou Digital Advisor. Si vous avez sélectionné *Accrued burst* dans le menu déroulant *View* de l’onglet *Consumption trend* dans la Console, ou l’option *Invoiced Accrued Burst* dans l’onglet *Consumption Trend* de Digital Advisor, vous pouvez voir la consommation de données de burst cumulée sur une base mensuelle ou trimestrielle, selon la période de facturation sélectionnée.
@@ -174,6 +176,7 @@ image:accr-burst-2.png["utilisation en rafale accumulée trimestriellement"]
 
 
 
+[[view-forecast-data]]
 == Consulter les données prévisionnelles
 
 Dans la console, vous pouvez utiliser le bouton *Prévisions* de l'onglet *Tendance de consommation* pour afficher l’utilisation de capacité projetée dans la vue *Consommation historique* et le pic cumulé projeté dans la vue *Pic cumulé*. Le bouton est activé par défaut dans les deux vues.
@@ -192,6 +195,7 @@ Si la consommation prévue risque de dépasser la capacité engagée, un indicat
 
 
 
+[[view-daily-accrued-burst-data-usage]]
 == Afficher l'utilisation quotidienne des données accumulées
 
 Vous pouvez consulter l'utilisation quotidienne des données accumulées pour une période de facturation mensuelle ou trimestrielle via la console ou le Digital Advisor.  Dans la console, le tableau *Rafale accumulée par jours* fournit des données détaillées, notamment l'horodatage, la capacité engagée, consommée et la capacité de rafale accumulée si vous sélectionnez *Rafale accumulée* dans la liste déroulante *Affichage* de l'onglet *Tendance de consommation*.

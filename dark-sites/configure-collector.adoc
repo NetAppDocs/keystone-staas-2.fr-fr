@@ -66,6 +66,7 @@ image:dark-site-overall-healthy-2.png["État du service"]
 
 
 
+[[export-usage-report]]
 == Exporter le rapport d'utilisation
 
 Vous devez envoyer le rapport récapitulatif d'utilisation mensuel à NetApp à la fin de chaque mois.  Vous pouvez générer ce rapport manuellement.
@@ -84,6 +85,7 @@ image:dark-site-clear-file-report-1.png["Effacer le rapport de fichier"]
 
 
 
+[[upgrade-ontap]]
 == Mettre à niveau ONTAP
 
 Keystone Collector prend en charge les mises à niveau ONTAP via TUI.
@@ -100,6 +102,7 @@ image:dark-site-start-webserver-1.png["Option Démarrer le serveur Web"]
 
 
 
+[[restart-keystone-collector]]
 == Redémarrer Keystone Collector
 
 Vous pouvez redémarrer le service Keystone Collector via l'interface utilisateur.  Accédez à *Maintenance > Redémarrer les services Collector* dans l'interface utilisateur.  Cela redémarrera tous les services du collecteur et leur état pourra être surveillé depuis l'écran d'accueil de TUI.

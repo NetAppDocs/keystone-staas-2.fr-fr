@@ -38,6 +38,7 @@ image:rest-api-token-types.png["Types de jetons"]
 
 
 
+[[generate-access-token-using-the-digital-advisor-rest-api]]
 == Générer un jeton d'accès à l'aide de l'API REST Digital Advisor
 
 Le jeton d'accès est utilisé pour authentifier les demandes d'API Digital Advisor .  Il peut être généré directement via la console avec le jeton d'actualisation ou en utilisant l'appel API suivant :
@@ -89,6 +90,7 @@ curl -X 'POST' \ 'https://api.activeiq.netapp.com/v1/tokens/accessToken' \ -H 'a
 ----
 
 
+[[execute-the-api-call]]
 == Exécuter l'appel API
 
 Une fois un jeton d'accès généré avec succès, les appels API Digital Advisor autorisés peuvent être exécutés pour les informations requises.

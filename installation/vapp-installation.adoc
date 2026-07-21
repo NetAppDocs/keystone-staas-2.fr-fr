@@ -18,6 +18,7 @@ Le déploiement de Keystone Collector sur les systèmes VMware vSphere comprend 
 
 
 
+[[deploying-the-ova-template]]
 == Déploiement du modèle OVA
 
 Suivez ces étapes :
@@ -59,6 +60,7 @@ Une fois la machine virtuelle déployée à partir du modèle et mise sous tensi
 
 
 
+[[initial-system-configuration]]
 == Configuration initiale du système
 
 Effectuez ces étapes sur vos systèmes VMware vSphere pour une configuration initiale des serveurs Keystone Collector déployés via OVA :
