@@ -691,7 +691,6 @@
   <block id="1c8da55ed1bb51aa2c1e766474b9b2bc" category="summary">Découvrez les types de capacités de stockage prises en charge par le service NetApp Keystone STaaS pour la version 2.</block>
   <block id="e561d7dfcd6620325c8edbb7b2c1d749" category="paragraph">Le service NetApp Keystone STaaS prend en charge plusieurs types de capacités de stockage.  Comprendre ces différents termes de capacité peut vous aider lorsque vous utilisez Keystone.</block>
   <block id="5233633b9faaa681d96ef5c43e30bea2" category="section-title">Capacité logique</block>
-  <block id="dfafb0db4cb7ff50434d65c4ee640f1a" category="paragraph">Il s’agit des données placées sur l’infrastructure Keystone par un client.  Toutes les capacités Keystone font référence à une capacité logique.  Par exemple, si un fichier de 1 Tio est stocké sur l’infrastructure Keystone , une capacité minimale de 1 Tio doit être achetée.</block>
   <block id="4ac938291a74f21a35352afb886d2d88" category="section-title">Capacité engagée</block>
   <block id="6695ab4bfa1eb6d5122189f790f27577" category="paragraph">La capacité logique minimale facturée chaque mois pendant l'abonnement :</block>
   <block id="c6eb79bc54b68ec5e0cc19ef77aaf577" category="list-text">Des capacités engagées et des niveaux de service supplémentaires peuvent être ajoutés au cours de la durée.</block>
@@ -2791,4 +2790,5 @@
   <block id="ec9f6b08367a17a666713d93adc74fa6" category="list-text">*Gris* : L’abonnement a expiré.</block>
   <block id="9a43c87c7a255c40ac13d4fd963633ae" category="paragraph">Pour les abonnements avec renouvellement automatique activé, une icône de renouvellement automatique s'affiche, indiquant que l'abonnement sera renouvelé automatiquement à la fin de la période en cours.</block>
   <block id="ac750267020c9b3c0e32de825d9b57fc" category="section-title">20 juillet 2026</block>
+  <block id="d0178ba7ef0d480555c11a8e0e008358" category="paragraph">Il s'agit de la capacité de stockage requise pour stocker les données utilisateur avant que toute efficacité des données fournie par la baie de stockage ne soit appliquée.</block>
 </blocks>

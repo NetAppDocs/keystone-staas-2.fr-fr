@@ -21,7 +21,7 @@ Le service NetApp Keystone STaaS prend en charge plusieurs types de capacités d
 [[logical-capacity]]
 == Capacité logique
 
-Il s’agit des données placées sur l’infrastructure Keystone par un client.  Toutes les capacités Keystone font référence à une capacité logique.  Par exemple, si un fichier de 1 Tio est stocké sur l’infrastructure Keystone , une capacité minimale de 1 Tio doit être achetée.
+Il s'agit de la capacité de stockage requise pour stocker les données utilisateur avant que toute efficacité des données fournie par la baie de stockage ne soit appliquée.
 
 
 
