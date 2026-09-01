@@ -80,4 +80,4 @@ Support
 
 | image:check.png["coche"] | Aucune 
 |===
-Pour plus d'informations sur le déploiement, voirlink:../concepts/infra.html["Infrastructures Keystone"] etlink:..//concepts/components.html["Composants pour le déploiement"] .
+Pour plus d'informations sur le déploiement, consultez link:../concepts/infra.html["Découvrez l'infrastructure Keystone"] et link:..//concepts/components.html["Composants requis pour les services Keystone"].

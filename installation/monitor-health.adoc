@@ -4,7 +4,7 @@ permalink: installation/monitor-health.html
 keywords: monitoring system health 
 summary: Pour garantir la disponibilité des données, vous pouvez surveiller l’état du collecteur Keystone en utilisant n’importe quel système de surveillance prenant en charge les requêtes HTTP. 
 ---
-= Surveiller la santé de Keystone Collector
+= Surveillance de l'état de santé pour Keystone Collector
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
