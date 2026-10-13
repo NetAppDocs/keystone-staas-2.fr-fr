@@ -18,6 +18,7 @@ Le tableau de bord Keystone est votre solution idéale pour surveiller, analyser
 
 * *Surveiller les détails de l'abonnement* : Consultez des informations détaillées sur vos abonnements Keystone, notamment les niveaux de service de performance (services de base et services complémentaires tels que la protection des données et Data Infrastructure Insights), l'utilisation de la capacité, les actifs et les alertes.
 * *Suivez l'utilisation de la capacité et générez des rapports* : Suivez l'utilisation actuelle et historique de la capacité et générez des rapports pour analyser les données d'abonnement et prendre des décisions éclairées.
+* *Générer des rapports d’état de santé* : Créez des rapports d’évaluation de l’état de santé à la demande ou planifiés pour examiner l’utilisation des abonnements, l’état opérationnel, les risques et les vulnérabilités.
 * *Consultez la chronologie des abonnements* : Restez informé des dates et événements clés en surveillant la chronologie de vos abonnements.
 * *Gérer les abonnements* : Soumettez des demandes de modification des niveaux de service de performance ou d'autres paramètres d'abonnement à mesure que vos besoins évoluent.
 * *Analyser les volumes et les objets* : obtenez des informations détaillées sur les volumes et les objets de vos abonnements, y compris leur capacité au niveau du volume et de l'objet.
@@ -100,6 +101,11 @@ link:../integrations/options.html#generate-reports-from-netapp-console-or-digita
 
 
  a| 
+link:../integrations/health-assessment-reports.html["Générer et planifier des rapports sur l’état de santé"]
+| Oui | Non 
+
+
+ a| 
 link:../integrations/volumes-objects-tab.html["Afficher les volumes et les détails des objets"]
 | Oui | Oui 
 
@@ -116,6 +122,7 @@ link:../integrations/performance-tab.html["Afficher les indicateurs de performan
 *Informations connexes*
 
 * link:../integrations/dashboard-access.html["Commencez avec le tableau de bord Keystone"]
+* link:../integrations/health-assessment-reports.html["Générer et planifier des rapports sur l’état de santé"]
 * link:../integrations/keystone-console.html["Tableau de bord Keystone dans la console NetApp"]
 * link:..//integrations/keystone-aiq.html["Tableau de bord Keystone dans Digital Advisor"]
 

@@ -117,6 +117,7 @@ image:icon-grey.png["icône de point gris"]*Aucune consommation* : Aucune utilis
 * link:../integrations/dashboard-overview.html["Comprendre le tableau de bord Keystone"]
 * link:../integrations/current-usage-tab.html["Consultez les détails de votre consommation actuelle"]
 * link:../integrations/consumption-tab.html["Voir les tendances de consommation"]
+* link:../integrations/health-assessment-reports.html["Générer et planifier des rapports sur l’état de santé"]
 * link:../integrations/subscription-timeline.html["Consultez la chronologie de votre abonnement"]
 * link:../integrations/assets-tab.html["Consultez vos actifs d'abonnement Keystone"]
 * link:../integrations/assets.html["Afficher les ressources de vos abonnements Keystone"]

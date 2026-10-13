@@ -18,6 +18,20 @@ Découvrez les dernières fonctionnalités et améliorations des services Keysto
 
 
 
+[[12-october-2026]]
+== 12 octobre 2026
+
+Cette version de Keystone STaaS inclut les mises à jour suivantes du tableau de bord Keystone dans la console NetApp.
+
+
+
+[[generate-health-insights-for-keystone-subscriptions]]
+=== Générer des informations sur l’état de santé des abonnements Keystone
+
+Vous pouvez télécharger des rapports PowerPoint à la demande ou programmer un envoi unique, hebdomadaire, mensuel ou trimestriel depuis *Storage > Keystone > Monitoring > Health reports* dans la NetApp Console. Chaque rapport combine l'utilisation des abonnements, l'état opérationnel, les risques et les vulnérabilités des abonnements sélectionnés, vous aidant ainsi à identifier les problèmes et à partager des informations exploitables avec les destinataires. Pour en savoir plus, consultez https://docs.netapp.com/us-en/keystone-staas/integrations/health-assessment-reports.html["Générer et planifier des rapports de santé pour les abonnements Keystone"].
+
+
+
 [[20-july-2026]]
 == 20 juillet 2026
 

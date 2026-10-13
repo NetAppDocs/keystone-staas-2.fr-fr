@@ -36,6 +36,15 @@ Les détails sont générés au format CSV que vous pouvez enregistrer pour une 
 
 
 
+[[generate-health-reports-from-netapp-console]]
+== Générer des rapports d'intégrité à partir de la NetApp Console
+
+Utilisez la NetApp Console pour générer ou planifier des rapports sur l’état pour un ou plusieurs abonnements. Ces rapports PowerPoint regroupent l’utilisation des abonnements, l’état opérationnel, les risques et les vulnérabilités. Digital Advisor ne prend pas en charge la génération ni la planification des rapports d’évaluation de l’état.
+
+Pour en savoir plus, consultez link:../integrations/health-assessment-reports.html["Générer et planifier des rapports de santé pour les abonnements Keystone"].
+
+
+
 [[generate-consolidated-report-from-digital-advisor]]
 == Générer un rapport consolidé à partir de Digital Advisor
 

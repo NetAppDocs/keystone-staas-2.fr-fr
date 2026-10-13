@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: integrations/health-assessment-reports.html 
+keywords: keystone-aiq, keystone reports, health assessment report, health reports, keystone dashboard, monitoring, console 
+summary: Utilisez les rapports d’évaluation de l’état de santé Keystone dans la NetApp Console pour consulter les détails des abonnements, évaluer leur état, analyser les tendances d’utilisation et identifier les risques et les vulnérabilités sur un ou plusieurs abonnements. Vous pouvez générer des rapports à la demande ou les programmer afin de partager des informations opérationnelles et de conformité précises avec les parties prenantes. 
+---
+= Générer et planifier des rapports de santé pour les abonnements Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Générez ou planifiez des rapports d'état pour un ou plusieurs abonnements Keystone à partir du tableau de bord Keystone dans NetApp Console. Ces rapports offrent une vue consolidée de l'utilisation des abonnements, de l'état opérationnel, des risques et des vulnérabilités, que vous pouvez partager avec les destinataires prévus. Cette fonctionnalité n'est pas disponible dans Digital Advisor.
+
+.À propos de cette tâche
+Les rapports de santé vous offrent une vue d'ensemble de l'utilisation des abonnements, de l'état opérationnel et des risques identifiés pour les abonnements que vous sélectionnez. Sur la page *Nouveau rapport*, utilisez le panneau *Configuration du rapport* pour définir la portée et les options du rapport. Utilisez la zone d'aperçu pour vérifier l'ordre des diapositives et la mise en page avant de générer ou de planifier le rapport. L'aperçu affiche uniquement la structure du rapport et n'affiche pas les données réelles des abonnements.
+
+Suivez ces étapes pour générer un rapport téléchargeable immédiatement ou pour programmer un rapport ponctuel ou récurrent pour une livraison ultérieure :
+
+.Étapes
+. Dans le menu de navigation de gauche de Console, sélectionnez *Storage > Keystone > Monitoring > Reports*.
+. Sélectionnez *Nouveau rapport*.
+. Dans le *panneau de configuration du rapport*, saisissez un nom dans le champ *Nom du rapport*.
+. Sélectionnez une plage horaire dans le menu déroulant *Plage horaire*.
++
+Sélectionnez une période prédéfinie, par exemple *60 derniers jours*, ou choisissez *Personnalisé* pour saisir vos propres dates. La période sélectionnée détermine les données historiques affichées dans la section *Tendance de la consommation* et dans les autres sections temporelles. Si vous choisissez *Personnalisé*, vous ne pouvez pas programmer le rapport.
+
++
+image:../media/schedule-report.png["Configuration du rapport d'intégrité indiquant que la planification est désactivée lorsqu'une plage de dates personnalisée est sélectionnée"]
+
+. Sélectionnez un ou plusieurs abonnements dans le menu déroulant *Abonnements*.
++
+
+NOTE: NetApp Les partenaires peuvent sélectionner des abonnements dans un ou plusieurs de leurs comptes clients Keystone gérés.
+
+. Sous *Sections du rapport*, sélectionnez les sections que vous souhaitez inclure.
++
+Chaque section que vous sélectionnez apparaît dans la zone d'aperçu et est incluse dans le rapport généré. Par exemple, vous pouvez inclure un résumé de vos abonnements, l'utilisation actuelle de votre capacité, les tendances de consommation, la capacité physique, l'état du système, ainsi que les risques et les vulnérabilités. Pour *Tendance de consommation*, vous pouvez inclure un graphique de la consommation historique et, éventuellement, une prévision de la consommation future.
+
+. Choisissez un thème de présentation.
+. Veuillez vérifier les sections affichées dans la zone d'aperçu afin de confirmer qu'elles correspondent à vos sélections.
+. Choisissez comment vous souhaitez créer le rapport.
++
+** *Générer un rapport*
++
+Sélectionnez *Générer le rapport* pour télécharger le rapport immédiatement.
+
++
+Le rapport est envoyé pour être généré, et vous revenez à l’onglet *Rapports*. Le rapport apparaît avec le statut *En cours*.
+
++
+Une fois le statut passé à *Généré*, sélectionnez l'icône des points de suspension à la fin de la ligne du rapport, puis sélectionnez *Télécharger*.
+
+** *Rapport de planification*
++
+Sélectionnez *Schedule* pour créer un rapport ponctuel ou récurrent, puis suivez les étapes suivantes :
+
++
+... Sélectionnez une fréquence : *Une seule fois*, *Hebdomadaire*, *Mensuel*, ou *Trimestriel*.
+... Sélectionnez une *date de début*.
++
+image:../media/schedule-dialog.png["Boîte de dialogue du rapport de planification affichant la fréquence hebdomadaire sélectionnée, les champs de date de début et de fin vides, un champ Destinataires et le format PPT sélectionné"]
+
++
+La date de début détermine quand le rapport est exécuté pour la première fois. Pour les fréquences récurrentes, le rapport s’exécute de nouveau selon la planification hebdomadaire, mensuelle ou trimestrielle sélectionnée.
+
+... Sélectionnez éventuellement une *date de fin*.
++
+Si vous ne sélectionnez pas de date de fin, la planification se poursuit jusqu'à ce que vous la modifiiez.
+
+... Sélectionnez *Planifier un rapport*.
++
+La planification est créée et le rapport apparaît dans l'onglet *Rapports* avec le type d'exécution *Exécution planifiée*. Utilisez les colonnes *Dernière exécution*, *Prochaine exécution* et *Statut* pour suivre chaque exécution.
+
++
+Pour modifier une planification hebdomadaire, mensuelle ou trimestrielle, sélectionnez l'icône représentant des points de suspension à la fin de la ligne du rapport, puis choisissez *Modifier la planification*. Vous pouvez le faire, que le statut soit *Planifié* ou *Généré*. Vous ne pouvez pas modifier une planification *ponctuelle* après la génération du rapport.
+
++
+Une fois le statut passé à *Généré*, sélectionnez l'icône des points de suspension à côté du rapport et sélectionnez *Télécharger*.
+
+
+
+
+
+
+
+.Résultat
+Les rapports générés sont téléchargés sous forme de présentations PowerPoint. Vous pouvez sélectionner *Générer à nouveau* dans le menu à trois points pour créer un nouveau rapport avec la même configuration.
+
+*Informations connexes*
+
+* link:../integrations/dashboard-access.html["Commencez avec le tableau de bord Keystone"]
+* link:../integrations/subscriptions-tab.html["Afficher les détails de vos abonnements Keystone"]
+* link:../integrations/current-usage-tab.html["Afficher l'utilisation actuelle"]
+* link:../integrations/consumption-tab.html["Voir les tendances de consommation"]
+* link:../integrations/assets-tab.html["Consultez les ressources associées à vos abonnements"]
+* link:../integrations/monitoring-alerts.html["Afficher et gérer les alertes"]
+* link:../integrations/monitoring-alert-monitors.html["Afficher et créer des moniteurs d'alerte"]
+
